@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Server Status</title>
+  <style>
+  .center{text-align:center}th{background-color:#0066FF}
+  </style>
+</head>
+<body>
+  <h1>Server Status</h1>
+  <script>
+  setTimeout("history.go(0);",200000)
+  </script> 
+  <script>
+
+
+  var nowtimeMiss =new Date();
+  var yearsMiss   = 2007 
+  var monthsMiss  = 09 
+  var daysMiss    = 21 
+  var hrsMiss             = 04 
+  var minMiss             = 26 
+  var secMiss             = 11 
+  var atmMiss             = new Date();
+  var seccMiss    = secMiss - atmMiss.getSeconds();
+  var ff2Miss             = 1;
+  var ff3Miss             = 1;
+  var ff4Miss             = 0;
+  function MakeArrayMiss(sizeMiss){
+        this.lengthMiss = sizeMiss;
+        for(var iMiss   = 1; iMiss <= sizeMiss; iMiss++){this[iMiss] = "";}
+        return this;}
+  function timeMiss(){
+        var nowwMiss = new Date();
+        secMiss = (nowwMiss.getSeconds() + seccMiss) % 60
+        if (secMiss     < 0)                                                                            {secMiss = 60 + secMiss;}
+        if (ff4Miss     == 0 && (secMiss == 00 || secMiss == 60))       {secMiss = 0; minMiss++; ff3Miss = 1; ff4Miss = 1;}
+        if (secMiss     != 00 && secMiss != 60)                                         {ff4Miss = 0;}
+        if (minMiss     == 60)                                                                          {minMiss = 00; hrsMiss++; ff2Miss = 1;}
+        if (hrsMiss     == 24)                                                                          {hrsMiss = 0;}
+        if (hrsMiss     <= 9 && ff2Miss == 1)                                           {ff2Miss = 0; hrsMiss = "0" + hrsMiss;}
+        if (secMiss     <= 9)                                                                           {secMiss = "0" + secMiss;}
+        if (minMiss     <= 9 && ff3Miss == 1)                                           {ff3Miss = 0; minMiss = "0" + minMiss;}
+        document.getElementById("clockMiss").innerHTML = yearsMiss + "-" + monthsMiss + "-" + daysMiss + " " + hrsMiss + ":" + minMiss + ":" + secMiss;}
+  setInterval("timeMiss()", 500);
+  </script> 
+  <script>
+
+
+  var nowtimeArch =new Date();
+  var yearsArch   = 2007 
+  var monthsArch  = 09 
+  var daysArch    = 21 
+  var hrsArch             = 16 
+  var minArch             = 26 
+  var secArch             = 11 
+  var atmArch             = new Date();
+  var seccArch    = secArch - atmArch.getSeconds();
+  var ff2Arch             = 1;
+  var ff3Arch             = 1;
+  var ff4Arch             = 0;
+  function MakeArrayArch(sizeArch){
+        this.lengthArch = sizeArch;
+        for(var iArch   = 1; iArch <= sizeArch; iArch++){this[iArch] = "";}
+        return this;}
+  function timeArch(){
+        var nowwArch = new Date();
+        secArch = (nowwArch.getSeconds() + seccArch) % 60
+        if (secArch     < 0)                                                                            {secArch = 60 + secArch;}
+        if (ff4Arch     == 0 && (secArch == 00 || secArch == 60))       {secArch = 0; minArch++; ff3Arch = 1; ff4Arch = 1;}
+        if (secArch     != 00 && secArch != 60)                                         {ff4Arch = 0;}
+        if (minArch     == 60)                                                                          {minArch = 00; hrsArch++; ff2Arch = 1;}
+        if (hrsArch     == 24)                                                                          {hrsArch = 0;}
+        if (hrsArch     <= 9 && ff2Arch == 1)                                           {ff2Arch = 0; hrsArch = "0" + hrsArch;}
+        if (secArch     <= 9)                                                                           {secArch = "0" + secArch;}
+        if (minArch     <= 9 && ff3Arch == 1)                                           {ff3Arch = 0; minArch = "0" + minArch;}
+        document.getElementById("clockArch").innerHTML = yearsArch + "-" + monthsArch + "-" + daysArch + " " + hrsArch + ":" + minArch + ":" + secArch;}
+  setInterval("timeArch()", 500);
+  </script> 
+  <script>
+
+
+  var nowtimeCali =new Date();
+  var yearsCali   = 2007 
+  var monthsCali  = 09 
+  var daysCali    = 21 
+  var hrsCali             = 01 
+  var minCali             = 26 
+  var secCali             = 11 
+  var atmCali             = new Date();
+  var seccCali    = secCali - atmCali.getSeconds();
+  var ff2Cali             = 1;
+  var ff3Cali             = 1;
+  var ff4Cali             = 0;
+  function MakeArrayCali(sizeCali){
+        this.lengthCali = sizeCali;
+        for(var iCali   = 1; iCali <= sizeCali; iCali++){this[iCali] = "";}
+        return this;}
+  function timeCali(){
+        var nowwCali = new Date();
+        secCali = (nowwCali.getSeconds() + seccCali) % 60
+        if (secCali     < 0)                                                                            {secCali = 60 + secCali;}
+        if (ff4Cali     == 0 && (secCali == 00 || secCali == 60))       {secCali = 0; minCali++; ff3Cali = 1; ff4Cali = 1;}
+        if (secCali     != 00 && secCali != 60)                                         {ff4Cali = 0;}
+        if (minCali     == 60)                                                                          {minCali = 00; hrsCali++; ff2Cali = 1;}
+        if (hrsCali     == 24)                                                                          {hrsCali = 0;}
+        if (hrsCali     <= 9 && ff2Cali == 1)                                           {ff2Cali = 0; hrsCali = "0" + hrsCali;}
+        if (secCali     <= 9)                                                                           {secCali = "0" + secCali;}
+        if (minCali     <= 9 && ff3Cali == 1)                                           {ff3Cali = 0; minCali = "0" + minCali;}
+        document.getElementById("clockCali").innerHTML = yearsCali + "-" + monthsCali + "-" + daysCali + " " + hrsCali + ":" + minCali + ":" + secCali;}
+  setInterval("timeCali()", 500);
+  </script> 
+  <script>
+
+
+  var nowtimeAlps =new Date();
+  var yearsAlps   = 2007 
+  var monthsAlps  = 09 
+  var daysAlps    = 21 
+  var hrsAlps             = 11 
+  var minAlps             = 26 
+  var secAlps             = 11 
+  var atmAlps             = new Date();
+  var seccAlps    = secAlps - atmAlps.getSeconds();
+  var ff2Alps             = 1;
+  var ff3Alps             = 1;
+  var ff4Alps             = 0;
+  function MakeArrayAlps(sizeAlps){
+        this.lengthAlps = sizeAlps;
+        for(var iAlps   = 1; iAlps <= sizeAlps; iAlps++){this[iAlps] = "";}
+        return this;}
+  function timeAlps(){
+        var nowwAlps = new Date();
+        secAlps = (nowwAlps.getSeconds() + seccAlps) % 60
+        if (secAlps     < 0)                                                                            {secAlps = 60 + secAlps;}
+        if (ff4Alps     == 0 && (secAlps == 00 || secAlps == 60))       {secAlps = 0; minAlps++; ff3Alps = 1; ff4Alps = 1;}
+        if (secAlps     != 00 && secAlps != 60)                                         {ff4Alps = 0;}
+        if (minAlps     == 60)                                                                          {minAlps = 00; hrsAlps++; ff2Alps = 1;}
+        if (hrsAlps     == 24)                                                                          {hrsAlps = 0;}
+        if (hrsAlps     <= 9 && ff2Alps == 1)                                           {ff2Alps = 0; hrsAlps = "0" + hrsAlps;}
+        if (secAlps     <= 9)                                                                           {secAlps = "0" + secAlps;}
+        if (minAlps     <= 9 && ff3Alps == 1)                                           {ff3Alps = 0; minAlps = "0" + minAlps;}
+        document.getElementById("clockAlps").innerHTML = yearsAlps + "-" + monthsAlps + "-" + daysAlps + " " + hrsAlps + ":" + minAlps + ":" + secAlps;}
+  setInterval("timeAlps()", 500);
+  </script>
+  <table width="750px">
+    <tr class="center">
+      <th>Server</th>
+      <th>Status</th>
+      <th>Players online</th>
+      <th>Time</th>
+    </tr>
+    <tr title="body=[&lt;img src=/images/medium.png&gt;] header=[Medium]">
+      <td>I Missouri Eastern Time (GMT-5)</td>
+      <td class="center"><font color="#44FF44"><b>Online</b></font></td>
+      <td class="center">&nbsp;&nbsp;&nbsp;412&nbsp;&nbsp; (33%)</td>
+      <td class="center">
+        <div id="clockMiss"></div>
+      </td>
+    </tr>
+    <tr title="body=[&lt;img src=/images/medium.png&gt;] header=[Medium]">
+      <td>II Achernar Greenwich MeanTime+8 (GMT+8)</td>
+      <td class="center"><font color="#44FF44"><b>Online</b></font></td>
+      <td class="center">&nbsp;&nbsp;&nbsp;276&nbsp;&nbsp; (22.1%)</td>
+      <td class="center">
+        <div id="clockArch"></div>
+      </td>
+    </tr>
+    <tr title="body=[&lt;img src=/images/medium.png&gt;] header=[Medium]">
+      <td>III California Pacific Time (GMT-8)</td>
+      <td class="center"><font color="#44FF44"><b>Online</b></font></td>
+      <td class="center">&nbsp;&nbsp;&nbsp;343&nbsp;&nbsp; (27.5%)</td>
+      <td class="center">
+        <div id="clockCali"></div>
+      </td>
+    </tr>
+    <tr title="body=[&lt;img src=/images/medium.png&gt;] header=[Medium]">
+      <td>IV Alps Greenwich MeanTime+2 (GMT+2)</td>
+      <td class="center"><font color="#44FF44"><b>Online</b></font></td>
+      <td class="center">&nbsp;&nbsp;&nbsp;218&nbsp;&nbsp; (17.5%)</td>
+      <td class="center">
+        <div id="clockAlps"></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><b>Total:</b> 1249 (100%)</td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quests</title>
+  <script language="JavaScript">
+  function setVariables() {
+  if (document.layers) {
+  v=".top=";
+  dS="document.";
+  sD="";
+  y="window.pageYOffset";
+  }
+  else if (document.all){
+  v=".pixelTop=";
+  dS="";
+  sD=".style";
+  y="document.body.scrollTop";
+  }
+  else if (document.getElementById){
+  y="window.pageYOffset-5";
+  }
+  }
+  function checkLocation() {
+  object="object1";
+  yy=eval(y);
+  if (document.getElementById)
+  document.getElementById("object1").style.top=yy
+  else
+  eval(dS+object+sD+v+yy)
+  setTimeout("checkLocation()",1);
+  }
+  </script>
+</head>
+<body>
+  <div id="object1" class="error" style="position:absolute; visibility:show; left:440px; top:1px; z-index:5; width:324px;">
+    <font size="1px"></font><a href="http://www.thunderized.org/info/">Click here for the new site</a>&nbsp; <a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=201177&amp;t=218"><img border="0" alt="Firefox 2" title="Firefox 2" src="http://sfx-images.mozilla.org/affiliates/Buttons/firefox2/ff2o80x15.gif"></a>
+    <table></table>
+  </div>
+  <script language='javascript'>
+  function change_url() {
+  document.location = "?find="+form1.find.value;
+  }
+  </script>
+  <link rel="shortcut icon" href="http://forum.thunderized.org/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="global.css">
+  <table style="border-collapse: collapse;width: 100%" height="100%">
+    <tr>
+      <td valign="top" style="padding: 0;background: transparent url(/images/border-l.gif) repeat-y left; width: 35px;" class="notdotted"></td>
+      <td valign="top" style="padding: 0" class="notdotted">
+        <div id="logostrip">
+          <div id='logostrip_end'>
+            <a href='/'><img src='/images/logo.gif' border='0'></a>
+          </div>
+        </div>
+        <div id="submenu">
+          <img src='/images/logo_bot.gif' style='float: left;' border='0'> <a href="/" valign="middle">Home</a> <a href="http://forum.thunderized.org" valign="middle">Thunderized Forum</a>
+          <div id="userlinks" align="center">
+            <a href="./index.php">Index</a> <a href="pets.php">Pets</a> <a href="npcs.php">Npc's</a> <a href="questmonsters.php">Quest Monsters</a> <a href="quest.php">Quests</a> <a href="guide.php">Other Guides</a> <a href="maps.php">Maps</a> <a href="items.php">Items</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+      </td>
+      <td valign="top" style="padding: 0;background: transparent url(/images/border-r.gif) repeat-y right; width: 35px;" class="notdotted"></td>
+    </tr>
+    <tr>
+      <td valign="top" style="padding: 0;background: transparent url(/images/border-l.gif) repeat-y left; width: 35px;" class="notdotted"></td>
+      <td class="notdotted">
+        <table width="500px">
+          <tr class="name">
+            <td>Quest</td>
+            <td>Min Lvl</td>
+            <td>Start Npc</td>
+          </tr>
+          <tr>
+            <td class="row1">
+              <a href="?quest=blydef">Blython Defender</a>
+            </td>
+            <td class="row1">60</td>
+            <td class="row1">Defender</td>
+          </tr>
+          <tr>
+            <td class="row1">
+              <a href="?quest=bounty">Bounty</a>
+            </td>
+            <td class="row1">1</td>
+            <td class="row1">Bloodreaper</td>
+          </tr>
+          <tr>
+            <td class="row1">
+              <a href="?quest=cupid">Cupid Quest</a>
+            </td>
+            <td class="row1"></td>
+            <td class="row1">Cupid</td>
+          </tr>
+          <tr>
+            <td class="row1">
+              <a href="?quest=drow">Drowcrusher</a>
+            </td>
+            <td class="row1">34</td>
+            <td class="row1">Drowcrusher</td>
+          </tr>
+          <tr>
+            <td class="row1">
+              <a href="?quest=hellion">Hellion</a>
+            </td>
+            <td class="row1">30</td>
+            <td class="row1">Howling Beast</td>
+          </tr>
+          <tr>
+            <td class="row1">
+              <a href="?quest=papa">Papa Drow</a>
+            </td>
+            <td class="row1">90</td>
+            <td class="row1">Drow Lord</td>
+          </tr>
+          <tr>
+            <td class="row1">
+              <a href="?quest=seal">Seal</a>
+            </td>
+            <td class="row1">70</td>
+            <td class="row1">Enderolth</td>
+          </tr>
+          <tr>
+            <td class="row1">
+              <a href="?quest=spirits">Spirit Hunting</a>
+            </td>
+            <td class="row1"></td>
+            <td class="row1"></td>
+          </tr>
+          <tr>
+            <td class="row1">
+              <a href="?quest=thiefquest">Thief Quest</a>
+            </td>
+            <td class="row1">7</td>
+            <td class="row1">Bar Waitress</td>
+          </tr>
+          <tr>
+            <td class="row1">
+              <a href="?quest=wooddef">Woodlingor Defender</a>
+            </td>
+            <td class="row1">50</td>
+            <td class="row1">Defender</td>
+          </tr>
+        </table>
+      </td>
+      <td valign="top" style="padding: 0;background: transparent url(/images/border-r.gif) repeat-y right; width: 35px;" class="notdotted"></td>
+    </tr>
+    <tr>
+      <td valign="top" style="padding: 0;background: transparent url(/images/border-l.gif) repeat-y left; width: 35px;" class="notdotted"></td>
+      <td align="center" class="bottom" width="100%">
+        <div class="copyright" id="gfooter" align="center">
+          Copyright &copy; Thunderized Site 2007. All rights reserved.<br>
+        </div>
+      </td>
+      <td valign="top" style="padding: 0;background: transparent url(/images/border-r.gif) repeat-y right; width: 35px;" class="notdotted"></td>
+    </tr>
+  </table>&nbsp;<font size="1">Thanks to: Gholayat, p0rnst4r, hevonen, Mateox, WoW, Lazy_Tiger, Under?aker and me (Wander)</font>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MythWar #c color-code picker</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="/js/boxover.js"></script>
+  <style>
+                img{BEHAVIOR: url("/colorpicker/pngbehavior.htc")}
+                .a{position: absolute; font-family: tahoma,verdana,sans-serif; font-size: 10px; display:none;}
+                .b{border: 1px solid rgb(0, 0, 0); background-color: rgb(255, 255, 255); line-height: 2px; width: 423px; height: 21px;}
+                .c{border-right: 1px solid rgb(255, 255, 255); width: 50px; height: 21px; float: left;}
+                .d{float: left;}
+                .e{border: 1px solid rgb(0, 0, 0); width: 397px; height: 305px; position: relative; background-color: rgb(224, 223, 227);}
+                .f{position: absolute; top: 3px; left: 8px;}
+                .g{z-index: 2; position: absolute; top: 22px; left: 317px; width: 58px; height: 33px;}
+                .h{z-index: 2; cursor: pointer; position: absolute; top: 55px; left: 317px; width: 58px; height: 33px;}
+  </style>
+  <style>
+  .cc{color:#888888}.cr{color:#FF0000}.cg{color:#00FF00}.cb{color:#0000FF}
+  </style>
+</head>
+<body>
+  <table border="0" width="100%" height="100%">
+    <tr>
+      <td width="35px" background="http://mythwar.thunderized.org/images/leftside.gif"></td>
+      <td height="1px">
+        <table width="100%" height="91px" cellpadding="0" cellspacing="0">
+          <tr height="61px">
+            <td width="500px">
+              <a href="/index.php" title="Home"><img src="/images/logo.gif" border="0"></a>
+            </td>
+            <td width="100%">
+              <a href="/index.php" title="Home"><img src="/images/logobg.gif" height="61px" width="100%" border="0"></a>
+            </td>
+            <td background="http://mythwar.thunderized.org/images/logobg.gif">
+              <a href="/index.php" title="Home"><img src="/images/logoright.gif" border="0"></a>
+            </td>
+          </tr>
+          <tr height="30px">
+            <td background="http://mythwar.thunderized.org/images/logobottombg.gif">
+              <a href="/index.php" title="Home"><img src="/images/logobottom.gif" border="0"></a>
+            </td>
+            <td background="http://mythwar.thunderized.org/images/logobottombg.gif" colspan="2" style="padding:4">
+              <a href="http://forum.thunderized.org/">Thunderized Forum</a> &middot; <a href="http://www.fieryhub.net/forum/">Pandora Forum</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td rowspan="3" width="35px" background="http://mythwar.thunderized.org/images/rightside.gif"></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table width="100%" height="100%">
+          <tr>
+            <td width="203px" class="menu">
+              <table height="100%" width="100%">
+                <tr>
+                  <td><img src="/images/sidecorner1.gif"></td>
+                  <td background="http://mythwar.thunderized.org/images/topside.gif" width="100%"></td>
+                  <td><img src="/images/sidecorner2.gif"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img title="available_pages" src="/images/available_pages.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[FAQ] body=[Skill levels, gold limit, ranks and much more] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=faq">FAQ</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Maps] body=[Overview of all maps] delay=[1000] fade=[on] fadespeed=[0.2]" href="/maps.php">Maps</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[NPCs] body=[Overview of all npcs] delay=[1000] fade=[on] fadespeed=[0.2]" href="/npcs.php">NPCs</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Time Calculator] body=[Calculate activity times to your time zone] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=timecalc">Time Calculator</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Quest Mobs] body=[Info about quest monsters] delay=[1000] fade=[on] fadespeed=[0.2]" href="/questmonsters.php">Quest Mobs</a><br>
+                    <img title="quests" src="/images/quests.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Bounty Quest] body=[Bounty Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=bounty">Bounty Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Ceasar Quest] body=[Ceasar Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ceasar">Ceasar Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Drowcrusher] body=[Drowcrusher Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=drowcrusher">Drowcrusher</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Drow Lord] body=[Drow Lord Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=drowlord">Drow Lord</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Errand Quest] body=[Errand Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=errand">Errand Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Firelord Quest] body=[Firelord Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=firelord">Firelord Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Guild Quest] body=[Guild Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=guildquest">Guild Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Hellion Quest] body=[Hellion Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=hellion">Hellion Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Hurricanes] body=[Hurricane Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=hurricane">Hurricanes</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Mokka Quest] body=[Mokka Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=mokka">Mokka Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Seal Quest] body=[Sealed Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=seal">Seal Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Spirit Hunting] body=[Spirit Hunting] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=spirits">Spirit Hunting</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Thief Quest] body=[Thief Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=thief">Thief Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Wood Defender] body=[Woodlingor Defender Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=wooddef">Wood Defender</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Worn Deity] body=[Worn Deity Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=worndeity">Worn Deity</a><br>
+                    <img title="reborning" src="/images/reborning.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Light] body=[Soulstone of Light Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssol">SS of Light</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Dark] body=[Soulstone of Dark Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssod">SS of Dark</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Fire] body=[Soulstone of Fire Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssof">SS of Fire</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Ice] body=[Soulstone of Ice Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssoi">SS of Ice</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Wind] body=[Soulstone of Wind Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssow">SS of Wind</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Reborn Quest] body=[Reborn Qest Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=reborn">Reborn Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Reborn Guide] body=[Guide about reborn] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=rebornguide">Reborn Guide</a><br>
+                    <img title="other_guides" src="/images/other_guides.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[AOD's] body=[Information about Armors of Dreams] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=aods">AOD's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Equipment] body=[Equipment Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=equipment">Equipment</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Forging] body=[Guide about forging] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=forging">Forging</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Gems] body=[Guide about gems] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=gems">Gems</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Shapeshift I] body=[Shapeshifting info and source] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=shapeshift">Shapeshift I</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Shapeshift II] body=[Shapeshift Potions Stats] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=shapeshift2">Shapeshift II</a><br>
+                    <img title="pet_stuff" src="/images/pet_stuff.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[About Pets] body=[Basic information about pets] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=aboutpets">About Pets</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[All Pets] body=[All pets and their stats, resist and more] delay=[1000] fade=[on] fadespeed=[0.2]" href="/pets.php">All Pets</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Intimacy] body=[Information about pet intimacy] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petintimacy">Intimacy</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet NPC's] body=[NPC's for pets] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petnpcs">Pet NPC's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet Reborn] body=[Guide about reborning a pet] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petreborn">Pet Reborn</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet Skills] body=[Pet skills info, and what pets have it] delay=[1000] fade=[on] fadespeed=[0.2]" href="/petskill.php">Pet Skills</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Resistance] body=[Guide about pet resistance] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petresist">Resistance</a><br>
+                    <img title="activitys" src="/images/activitys.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Crab] body=[Guide about crab activity] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=crab">Crab</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Flurry] body=[Guide about lottery activity] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=flurry">Flurry</a><br>
+                    <img title="misc" src="/images/misc.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Skill Calculator] body=[Fill in your exp and see how much you need!] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=skillcalc">Skill Calculator</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Wallpapers] body=[Myth War Wallpapers] delay=[1000] fade=[on] fadespeed=[0.2]" href="/wallpapers.php">Wallpapers</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Story's] body=[Story's] delay=[1000] fade=[on] fadespeed=[0.2]" href="/story.php?story=all">Story's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Items] body=[Myth War Items] delay=[1000] fade=[on] fadespeed=[0.2]" href="/items.php">Items</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Symbol Codes] body=[Read how to use symbols like '" and="" more="" in="" myth="" delay="[1000]" fade="[on]" fadespeed="[0.2]&quot;" href="/guide.php?guide=symbols">Symbol Codes</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Fake Npc Msg] body=[Make a fake npc message!] delay=[1000] fade=[on] fadespeed=[0.2]" href="/faker.php">Fake Npc Msg</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[MW Links] body=[MythWar related links] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=links">MW Links</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Search] body=[Search] delay=[1000] fade=[on] fadespeed=[0.2]" href="/index.php?act=search">Search</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Contact] body=[Contact] delay=[1000] fade=[on] fadespeed=[0.2]" href="/index.php?act=contact">Contact</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Lvl Exp List] body=[Exp needed each level] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=levelexplist">Lvl Exp List</a><br>
+                  </td>
+                  <td background="http://mythwar.thunderized.org/images/leftside2.gif" height="100%"></td>
+                </tr>
+                <tr>
+                  <td><img src="/images/sidecorner4.gif"></td>
+                  <td background="http://mythwar.thunderized.org/images/bottomside.gif" width="100%"></td>
+                  <td><img src="/images/sidecorner3.gif"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding-left:5px;padding-right:5px" class="content">
+              <script src="/colorpicker/colorpicker.js" type="text/javascript"></script>
+              <h1>MythWar #c code color picker</h1>Click in the text-field to choose a color<br>
+              <br>
+              <input id="input2" style="width:180px" value="Click here">
+              <div class="a">
+                <div class="b">
+                  <div class="c"></div>
+                  <div class="d"><img src="/colorpicker/cp_horizontal_picker.png" style="cursor: crosshair;"> <img src="/colorpicker/cp_mini_icon.png" style="cursor: pointer; margin-left: 1px;"></div>
+                </div>
+                <div class="e">
+                <div class="f">
+                  Select Color:
+                </div><img galleryimg="no" style="position:absolute;top:20px;left:8px;" src="/colorpicker/cp_lg_background.png"> <img galleryimg="no" style="cursor:crosshair;position:absolute;top:22px;left:10px;" src="/colorpicker/cp_lg_overlay.png"> <img style="cursor: pointer; position: absolute; top: 20px; left: 280px; z-index: 2;" src="/colorpicker/cp_color_slider.png"> <img style="cursor: pointer; position: absolute; top: 18px; left: 271px; z-index: 1;" src="/colorpicker/cp_arrows.gif"> <img style="position: absolute; top: 20px; left: 315px;" src="/colorpicker/cp_cur_color_background.png">
+                <div class="g"></div>
+                <div class="h"></div>
+                <div style="position: absolute; top: 103px; left: 315px;">
+                  R:
+                </div>
+                <div style="position: absolute; top: 128px; left: 315px;">
+                  G:
+                </div>
+                <div style="position: absolute; top: 153px; left: 315px;">
+                  B:
+                </div><input style="position: absolute; top: 100px; left: 330px; width: 47px;"> <input style="position: absolute; top: 125px; left: 330px; width: 47px;"> <input style="position: absolute; top: 150px; left: 330px; width: 47px;"> <button style="position: absolute; bottom: 50px; left: 315px; width: 77px;">OK</button> <button style="position: absolute; bottom: 25px; left: 315px; width: 77px;">Cancel</button> <img style="cursor: pointer; position: absolute; top: 0px; right: 0px;" src="/colorpicker/cp_mini_icon.png"></div>
+              </div><br>
+              <br>
+              <h2>Explanation</h2>The code starts with #c, followed by 3x 2 numbers/letters. Every 2 numbers/letters are a hexicedimal number.<br>
+              Every pair is minimum 00, and maximum FF (0-9, A-F x2). The first 2 are for red, the 2nd 2 are for green and the 3rd 2 are for blue.<br>
+              <br>
+              Examples:<br>
+              <span class="cc">#c</span><span class="cr">FF</span><span class="cg">00</span><span class="cb">00</span>: <font color="#FF0000">Red</font><br>
+              <span class="cc">#c</span><span class="cr">00</span><span class="cg">FF</span><span class="cb">00</span>: <font color="#00FF00">Green</font><br>
+              <span class="cc">#c</span><span class="cr">00</span><span class="cg">00</span><span class="cb">FF</span>: <font color="#0000FF">Blue</font><br>
+              <br>
+              <span class="cc">#c</span><span class="cr">FF</span><span class="cg">99</span><span class="cb">00</span>: <font color="#FF9900">Orange</font><br>
+              <span class="cc">#c</span><span class="cr">FF</span><span class="cg">FF</span><span class="cb">00</span>: <font color="#FFFF00">Yellow</font><br>
+              <span class="cc">#c</span><span class="cr">FF</span><span class="cg">00</span><span class="cb">FF</span>: <font color="#FF00FF">Purple</font><br>
+              <br>
+              <span class="cc">#c</span><span class="cr">00</span><span class="cg">00</span><span class="cb">00</span>: <font color="#000000">Black</font><br>
+              <span class="cc">#c</span><span class="cr">FF</span><span class="cg">FF</span><span class="cb">FF</span>: <font color="#FFFFFF">White</font><br>
+              <span class="cc">#c</span><span class="cr">AA</span><span class="cg">AA</span><span class="cb">AA</span>: <font color="#AAAAAA">Grey</font><br>
+              <br>
+              <br>
+              <h3>Easy colors:</h3>
+              <table cellspacing="0" cellpaddding="0" border="0">
+                <tr>
+                  <td bgcolor='#000000'><b>#c000000</b></td>
+                  <td bgcolor='#000033'><b>#c000033</b></td>
+                  <td bgcolor='#000066'><b>#c000066</b></td>
+                  <td bgcolor='#000099'><b>#c000099</b></td>
+                  <td bgcolor='#0000CC'><b>#c0000CC</b></td>
+                  <td bgcolor='#0000FF'><b>#c0000FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#003300'><b>#c003300</b></td>
+                  <td bgcolor='#003333'><b>#c003333</b></td>
+                  <td bgcolor='#003366'><b>#c003366</b></td>
+                  <td bgcolor='#003399'><b>#c003399</b></td>
+                  <td bgcolor='#0033CC'><b>#c0033CC</b></td>
+                  <td bgcolor='#0033FF'><b>#c0033FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#006600'><b>#c006600</b></td>
+                  <td bgcolor='#006633'><b>#c006633</b></td>
+                  <td bgcolor='#006666'><b>#c006666</b></td>
+                  <td bgcolor='#006699'><b>#c006699</b></td>
+                  <td bgcolor='#0066CC'><b>#c0066CC</b></td>
+                  <td bgcolor='#0066FF'><b>#c0066FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#009900'><b>#c009900</b></td>
+                  <td bgcolor='#009933'><b>#c009933</b></td>
+                  <td bgcolor='#009966'><b>#c009966</b></td>
+                  <td bgcolor='#009999'><b>#c009999</b></td>
+                  <td bgcolor='#0099CC'><b>#c0099CC</b></td>
+                  <td bgcolor='#0099FF'><b>#c0099FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#00CC00'><b>#c00CC00</b></td>
+                  <td bgcolor='#00CC33'><b>#c00CC33</b></td>
+                  <td bgcolor='#00CC66'><b>#c00CC66</b></td>
+                  <td bgcolor='#00CC99'><b>#c00CC99</b></td>
+                  <td bgcolor='#00CCCC'><b>#c00CCCC</b></td>
+                  <td bgcolor='#00CCFF'><b>#c00CCFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#00FF00'><b>#c00FF00</b></td>
+                  <td bgcolor='#00FF33'><b>#c00FF33</b></td>
+                  <td bgcolor='#00FF66'><b>#c00FF66</b></td>
+                  <td bgcolor='#00FF99'><b>#c00FF99</b></td>
+                  <td bgcolor='#00FFCC'><b>#c00FFCC</b></td>
+                  <td bgcolor='#00FFFF'><b>#c00FFFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#330000'><b>#c330000</b></td>
+                  <td bgcolor='#330033'><b>#c330033</b></td>
+                  <td bgcolor='#330066'><b>#c330066</b></td>
+                  <td bgcolor='#330099'><b>#c330099</b></td>
+                  <td bgcolor='#3300CC'><b>#c3300CC</b></td>
+                  <td bgcolor='#3300FF'><b>#c3300FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#333300'><b>#c333300</b></td>
+                  <td bgcolor='#333333'><b>#c333333</b></td>
+                  <td bgcolor='#333366'><b>#c333366</b></td>
+                  <td bgcolor='#333399'><b>#c333399</b></td>
+                  <td bgcolor='#3333CC'><b>#c3333CC</b></td>
+                  <td bgcolor='#3333FF'><b>#c3333FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#336600'><b>#c336600</b></td>
+                  <td bgcolor='#336633'><b>#c336633</b></td>
+                  <td bgcolor='#336666'><b>#c336666</b></td>
+                  <td bgcolor='#336699'><b>#c336699</b></td>
+                  <td bgcolor='#3366CC'><b>#c3366CC</b></td>
+                  <td bgcolor='#3366FF'><b>#c3366FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#339900'><b>#c339900</b></td>
+                  <td bgcolor='#339933'><b>#c339933</b></td>
+                  <td bgcolor='#339966'><b>#c339966</b></td>
+                  <td bgcolor='#339999'><b>#c339999</b></td>
+                  <td bgcolor='#3399CC'><b>#c3399CC</b></td>
+                  <td bgcolor='#3399FF'><b>#c3399FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#33CC00'><b>#c33CC00</b></td>
+                  <td bgcolor='#33CC33'><b>#c33CC33</b></td>
+                  <td bgcolor='#33CC66'><b>#c33CC66</b></td>
+                  <td bgcolor='#33CC99'><b>#c33CC99</b></td>
+                  <td bgcolor='#33CCCC'><b>#c33CCCC</b></td>
+                  <td bgcolor='#33CCFF'><b>#c33CCFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#33FF00'><b>#c33FF00</b></td>
+                  <td bgcolor='#33FF33'><b>#c33FF33</b></td>
+                  <td bgcolor='#33FF66'><b>#c33FF66</b></td>
+                  <td bgcolor='#33FF99'><b>#c33FF99</b></td>
+                  <td bgcolor='#33FFCC'><b>#c33FFCC</b></td>
+                  <td bgcolor='#33FFFF'><b>#c33FFFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#660000'><b>#c660000</b></td>
+                  <td bgcolor='#660033'><b>#c660033</b></td>
+                  <td bgcolor='#660066'><b>#c660066</b></td>
+                  <td bgcolor='#660099'><b>#c660099</b></td>
+                  <td bgcolor='#6600CC'><b>#c6600CC</b></td>
+                  <td bgcolor='#6600FF'><b>#c6600FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#663300'><b>#c663300</b></td>
+                  <td bgcolor='#663333'><b>#c663333</b></td>
+                  <td bgcolor='#663366'><b>#c663366</b></td>
+                  <td bgcolor='#663399'><b>#c663399</b></td>
+                  <td bgcolor='#6633CC'><b>#c6633CC</b></td>
+                  <td bgcolor='#6633FF'><b>#c6633FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#666600'><b>#c666600</b></td>
+                  <td bgcolor='#666633'><b>#c666633</b></td>
+                  <td bgcolor='#666666'><b>#c666666</b></td>
+                  <td bgcolor='#666699'><b>#c666699</b></td>
+                  <td bgcolor='#6666CC'><b>#c6666CC</b></td>
+                  <td bgcolor='#6666FF'><b>#c6666FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#669900'><b>#c669900</b></td>
+                  <td bgcolor='#669933'><b>#c669933</b></td>
+                  <td bgcolor='#669966'><b>#c669966</b></td>
+                  <td bgcolor='#669999'><b>#c669999</b></td>
+                  <td bgcolor='#6699CC'><b>#c6699CC</b></td>
+                  <td bgcolor='#6699FF'><b>#c6699FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#66CC00'><b>#c66CC00</b></td>
+                  <td bgcolor='#66CC33'><b>#c66CC33</b></td>
+                  <td bgcolor='#66CC66'><b>#c66CC66</b></td>
+                  <td bgcolor='#66CC99'><b>#c66CC99</b></td>
+                  <td bgcolor='#66CCCC'><b>#c66CCCC</b></td>
+                  <td bgcolor='#66CCFF'><b>#c66CCFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#66FF00'><b>#c66FF00</b></td>
+                  <td bgcolor='#66FF33'><b>#c66FF33</b></td>
+                  <td bgcolor='#66FF66'><b>#c66FF66</b></td>
+                  <td bgcolor='#66FF99'><b>#c66FF99</b></td>
+                  <td bgcolor='#66FFCC'><b>#c66FFCC</b></td>
+                  <td bgcolor='#66FFFF'><b>#c66FFFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#990000'><b>#c990000</b></td>
+                  <td bgcolor='#990033'><b>#c990033</b></td>
+                  <td bgcolor='#990066'><b>#c990066</b></td>
+                  <td bgcolor='#990099'><b>#c990099</b></td>
+                  <td bgcolor='#9900CC'><b>#c9900CC</b></td>
+                  <td bgcolor='#9900FF'><b>#c9900FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#993300'><b>#c993300</b></td>
+                  <td bgcolor='#993333'><b>#c993333</b></td>
+                  <td bgcolor='#993366'><b>#c993366</b></td>
+                  <td bgcolor='#993399'><b>#c993399</b></td>
+                  <td bgcolor='#9933CC'><b>#c9933CC</b></td>
+                  <td bgcolor='#9933FF'><b>#c9933FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#996600'><b>#c996600</b></td>
+                  <td bgcolor='#996633'><b>#c996633</b></td>
+                  <td bgcolor='#996666'><b>#c996666</b></td>
+                  <td bgcolor='#996699'><b>#c996699</b></td>
+                  <td bgcolor='#9966CC'><b>#c9966CC</b></td>
+                  <td bgcolor='#9966FF'><b>#c9966FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#999900'><b>#c999900</b></td>
+                  <td bgcolor='#999933'><b>#c999933</b></td>
+                  <td bgcolor='#999966'><b>#c999966</b></td>
+                  <td bgcolor='#999999'><b>#c999999</b></td>
+                  <td bgcolor='#9999CC'><b>#c9999CC</b></td>
+                  <td bgcolor='#9999FF'><b>#c9999FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#99CC00'><b>#c99CC00</b></td>
+                  <td bgcolor='#99CC33'><b>#c99CC33</b></td>
+                  <td bgcolor='#99CC66'><b>#c99CC66</b></td>
+                  <td bgcolor='#99CC99'><b>#c99CC99</b></td>
+                  <td bgcolor='#99CCCC'><b>#c99CCCC</b></td>
+                  <td bgcolor='#99CCFF'><b>#c99CCFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#99FF00'><b>#c99FF00</b></td>
+                  <td bgcolor='#99FF33'><b>#c99FF33</b></td>
+                  <td bgcolor='#99FF66'><b>#c99FF66</b></td>
+                  <td bgcolor='#99FF99'><b>#c99FF99</b></td>
+                  <td bgcolor='#99FFCC'><b>#c99FFCC</b></td>
+                  <td bgcolor='#99FFFF'><b>#c99FFFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#CC0000'><b>#cCC0000</b></td>
+                  <td bgcolor='#CC0033'><b>#cCC0033</b></td>
+                  <td bgcolor='#CC0066'><b>#cCC0066</b></td>
+                  <td bgcolor='#CC0099'><b>#cCC0099</b></td>
+                  <td bgcolor='#CC00CC'><b>#cCC00CC</b></td>
+                  <td bgcolor='#CC00FF'><b>#cCC00FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#CC3300'><b>#cCC3300</b></td>
+                  <td bgcolor='#CC3333'><b>#cCC3333</b></td>
+                  <td bgcolor='#CC3366'><b>#cCC3366</b></td>
+                  <td bgcolor='#CC3399'><b>#cCC3399</b></td>
+                  <td bgcolor='#CC33CC'><b>#cCC33CC</b></td>
+                  <td bgcolor='#CC33FF'><b>#cCC33FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#CC6600'><b>#cCC6600</b></td>
+                  <td bgcolor='#CC6633'><b>#cCC6633</b></td>
+                  <td bgcolor='#CC6666'><b>#cCC6666</b></td>
+                  <td bgcolor='#CC6699'><b>#cCC6699</b></td>
+                  <td bgcolor='#CC66CC'><b>#cCC66CC</b></td>
+                  <td bgcolor='#CC66FF'><b>#cCC66FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#CC9900'><b>#cCC9900</b></td>
+                  <td bgcolor='#CC9933'><b>#cCC9933</b></td>
+                  <td bgcolor='#CC9966'><b>#cCC9966</b></td>
+                  <td bgcolor='#CC9999'><b>#cCC9999</b></td>
+                  <td bgcolor='#CC99CC'><b>#cCC99CC</b></td>
+                  <td bgcolor='#CC99FF'><b>#cCC99FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#CCCC00'><b>#cCCCC00</b></td>
+                  <td bgcolor='#CCCC33'><b>#cCCCC33</b></td>
+                  <td bgcolor='#CCCC66'><b>#cCCCC66</b></td>
+                  <td bgcolor='#CCCC99'><b>#cCCCC99</b></td>
+                  <td bgcolor='#CCCCCC'><b>#cCCCCCC</b></td>
+                  <td bgcolor='#CCCCFF'><b>#cCCCCFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#CCFF00'><b>#cCCFF00</b></td>
+                  <td bgcolor='#CCFF33'><b>#cCCFF33</b></td>
+                  <td bgcolor='#CCFF66'><b>#cCCFF66</b></td>
+                  <td bgcolor='#CCFF99'><b>#cCCFF99</b></td>
+                  <td bgcolor='#CCFFCC'><b>#cCCFFCC</b></td>
+                  <td bgcolor='#CCFFFF'><b>#cCCFFFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#FF0000'><b>#cFF0000</b></td>
+                  <td bgcolor='#FF0033'><b>#cFF0033</b></td>
+                  <td bgcolor='#FF0066'><b>#cFF0066</b></td>
+                  <td bgcolor='#FF0099'><b>#cFF0099</b></td>
+                  <td bgcolor='#FF00CC'><b>#cFF00CC</b></td>
+                  <td bgcolor='#FF00FF'><b>#cFF00FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#FF3300'><b>#cFF3300</b></td>
+                  <td bgcolor='#FF3333'><b>#cFF3333</b></td>
+                  <td bgcolor='#FF3366'><b>#cFF3366</b></td>
+                  <td bgcolor='#FF3399'><b>#cFF3399</b></td>
+                  <td bgcolor='#FF33CC'><b>#cFF33CC</b></td>
+                  <td bgcolor='#FF33FF'><b>#cFF33FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#FF6600'><b>#cFF6600</b></td>
+                  <td bgcolor='#FF6633'><b>#cFF6633</b></td>
+                  <td bgcolor='#FF6666'><b>#cFF6666</b></td>
+                  <td bgcolor='#FF6699'><b>#cFF6699</b></td>
+                  <td bgcolor='#FF66CC'><b>#cFF66CC</b></td>
+                  <td bgcolor='#FF66FF'><b>#cFF66FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#FF9900'><b>#cFF9900</b></td>
+                  <td bgcolor='#FF9933'><b>#cFF9933</b></td>
+                  <td bgcolor='#FF9966'><b>#cFF9966</b></td>
+                  <td bgcolor='#FF9999'><b>#cFF9999</b></td>
+                  <td bgcolor='#FF99CC'><b>#cFF99CC</b></td>
+                  <td bgcolor='#FF99FF'><b>#cFF99FF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#FFCC00'><b>#cFFCC00</b></td>
+                  <td bgcolor='#FFCC33'><b>#cFFCC33</b></td>
+                  <td bgcolor='#FFCC66'><b>#cFFCC66</b></td>
+                  <td bgcolor='#FFCC99'><b>#cFFCC99</b></td>
+                  <td bgcolor='#FFCCCC'><b>#cFFCCCC</b></td>
+                  <td bgcolor='#FFCCFF'><b>#cFFCCFF</b></td>
+                </tr>
+                <tr>
+                  <td bgcolor='#FFFF00'><b>#cFFFF00</b></td>
+                  <td bgcolor='#FFFF33'><b>#cFFFF33</b></td>
+                  <td bgcolor='#FFFF66'><b>#cFFFF66</b></td>
+                  <td bgcolor='#FFFF99'><b>#cFFFF99</b></td>
+                  <td bgcolor='#FFFFCC'><b>#cFFFFCC</b></td>
+                  <td bgcolor='#FFFFFF'><b>#cFFFFFF</b></td>
+                </tr>
+              </table><br>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="35px" background="http://mythwar.thunderized.org/images/leftside.gif"></td>
+      <td height="30px" background="http://mythwar.thunderized.org/images/copyrightbg.gif" class="copyright">
+        &copy; All copyright reserved. Found any mistakes? Is something missing or want your guide to be posted? Mail to <a href="mailto:wander@thunderized.org">Wander@thunderized.org</a> or <a href="/index.php?act=contact">click here</a>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

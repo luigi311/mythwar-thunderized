@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pets</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="/js/boxover.js"></script>
+  <style type="text/css">
+  #dropmenudiv{
+        position:absolute;
+        border: black 1px solid;
+        border-bottom-width: 0;
+        font:normal 12px Verdana;
+        line-height:14px;
+        z-index:100;
+  }
+  #dropmenudiv a{
+        width: 100%;
+        display: block;
+        text-indent: 2px;
+        border-bottom: 1px solid black;
+        padding: 1px 0;
+        text-decoration: none;
+        font-weight: bold;
+  }
+  #dropmenudiv a:hover{
+        background-color: #164B75;
+  }
+  </style>
+</head>
+<body>
+  <table border="0" width="100%" height="100%">
+    <tr>
+      <td width="35px" background="http://mythwar.thunderized.org/images/leftside.gif"></td>
+      <td height="1px">
+        <table width="100%" height="91px" cellpadding="0" cellspacing="0">
+          <tr height="61px">
+            <td width="500px">
+              <a href="/index.php" title="Home"><img src="/images/logo.gif" border="0"></a>
+            </td>
+            <td width="100%">
+              <a href="/index.php" title="Home"><img src="/images/logobg.gif" height="61px" width="100%" border="0"></a>
+            </td>
+            <td background="http://mythwar.thunderized.org/images/logobg.gif">
+              <a href="/index.php" title="Home"><img src="/images/logoright.gif" border="0"></a>
+            </td>
+          </tr>
+          <tr height="30px">
+            <td background="http://mythwar.thunderized.org/images/logobottombg.gif">
+              <a href="/index.php" title="Home"><img src="/images/logobottom.gif" border="0"></a>
+            </td>
+            <td background="http://mythwar.thunderized.org/images/logobottombg.gif" colspan="2" style="padding:4">
+              <a href="http://forum.thunderized.org/">Thunderized Forum</a> &middot; <a href="http://www.fieryhub.net/forum/">Pandora Forum</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td rowspan="3" width="35px" background="http://mythwar.thunderized.org/images/rightside.gif"></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table width="100%" height="100%">
+          <tr>
+            <td width="203px" class="menu">
+              <table height="100%" width="100%">
+                <tr>
+                  <td><img src="/images/sidecorner1.gif"></td>
+                  <td background="http://mythwar.thunderized.org/images/topside.gif" width="100%"></td>
+                  <td><img src="/images/sidecorner2.gif"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img title="available_pages" src="/images/available_pages.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[FAQ] body=[Skill levels, gold limit, ranks and much more] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=faq">FAQ</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Maps] body=[Overview of all maps] delay=[1000] fade=[on] fadespeed=[0.2]" href="/maps.php">Maps</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[NPCs] body=[Overview of all npcs] delay=[1000] fade=[on] fadespeed=[0.2]" href="/npcs.php">NPCs</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Time Calculator] body=[Calculate activity times to your time zone] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=timecalc">Time Calculator</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Quest Mobs] body=[Info about quest monsters] delay=[1000] fade=[on] fadespeed=[0.2]" href="/questmonsters.php">Quest Mobs</a><br>
+                    <img title="quests" src="/images/quests.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Bounty Quest] body=[Bounty Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=bounty">Bounty Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Ceasar Quest] body=[Ceasar Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ceasar">Ceasar Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Drowcrusher] body=[Drowcrusher Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=drowcrusher">Drowcrusher</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Drow Lord] body=[Drow Lord Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=drowlord">Drow Lord</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Errand Quest] body=[Errand Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=errand">Errand Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Firelord Quest] body=[Firelord Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=firelord">Firelord Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Guild Quest] body=[Guild Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=guildquest">Guild Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Hellion Quest] body=[Hellion Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=hellion">Hellion Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Hurricanes] body=[Hurricane Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=hurricane">Hurricanes</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Mokka Quest] body=[Mokka Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=mokka">Mokka Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Seal Quest] body=[Sealed Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=seal">Seal Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Spirit Hunting] body=[Spirit Hunting] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=spirits">Spirit Hunting</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Thief Quest] body=[Thief Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=thief">Thief Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Wood Defender] body=[Woodlingor Defender Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=wooddef">Wood Defender</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Worn Deity] body=[Worn Deity Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=worndeity">Worn Deity</a><br>
+                    <img title="reborning" src="/images/reborning.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Light] body=[Soulstone of Light Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssol">SS of Light</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Dark] body=[Soulstone of Dark Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssod">SS of Dark</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Fire] body=[Soulstone of Fire Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssof">SS of Fire</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Ice] body=[Soulstone of Ice Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssoi">SS of Ice</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Wind] body=[Soulstone of Wind Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssow">SS of Wind</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Reborn Quest] body=[Reborn Qest Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=reborn">Reborn Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Reborn Guide] body=[Guide about reborn] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=rebornguide">Reborn Guide</a><br>
+                    <img title="other_guides" src="/images/other_guides.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[AOD's] body=[Information about Armors of Dreams] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=aods">AOD's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Equipment] body=[Equipment Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=equipment">Equipment</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Forging] body=[Guide about forging] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=forging">Forging</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Gems] body=[Guide about gems] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=gems">Gems</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Shapeshift I] body=[Shapeshifting info and source] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=shapeshift">Shapeshift I</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Shapeshift II] body=[Shapeshift Potions Stats] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=shapeshift2">Shapeshift II</a><br>
+                    <img title="pet_stuff" src="/images/pet_stuff.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[About Pets] body=[Basic information about pets] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=aboutpets">About Pets</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[All Pets] body=[All pets and their stats, resist and more] delay=[1000] fade=[on] fadespeed=[0.2]" href="/pets.php">All Pets</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Intimacy] body=[Information about pet intimacy] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petintimacy">Intimacy</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet NPC's] body=[NPC's for pets] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petnpcs">Pet NPC's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet Reborn] body=[Guide about reborning a pet] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petreborn">Pet Reborn</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet Skills] body=[Pet skills info, and what pets have it] delay=[1000] fade=[on] fadespeed=[0.2]" href="/petskill.php">Pet Skills</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Resistance] body=[Guide about pet resistance] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petresist">Resistance</a><br>
+                    <img title="activitys" src="/images/activitys.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Crab] body=[Guide about crab activity] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=crab">Crab</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Flurry] body=[Guide about lottery activity] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=flurry">Flurry</a><br>
+                    <img title="misc" src="/images/misc.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Skill Calculator] body=[Fill in your exp and see how much you need!] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=skillcalc">Skill Calculator</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Wallpapers] body=[Myth War Wallpapers] delay=[1000] fade=[on] fadespeed=[0.2]" href="/wallpapers.php">Wallpapers</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Story's] body=[Story's] delay=[1000] fade=[on] fadespeed=[0.2]" href="/story.php?story=all">Story's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Items] body=[Myth War Items] delay=[1000] fade=[on] fadespeed=[0.2]" href="/items.php">Items</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Symbol Codes] body=[Read how to use symbols like '" and="" more="" in="" myth="" delay="[1000]" fade="[on]" fadespeed="[0.2]&quot;" href="/guide.php?guide=symbols">Symbol Codes</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Fake Npc Msg] body=[Make a fake npc message!] delay=[1000] fade=[on] fadespeed=[0.2]" href="/faker.php">Fake Npc Msg</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[MW Links] body=[MythWar related links] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=links">MW Links</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Search] body=[Search] delay=[1000] fade=[on] fadespeed=[0.2]" href="/index.php?act=search">Search</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Contact] body=[Contact] delay=[1000] fade=[on] fadespeed=[0.2]" href="/index.php?act=contact">Contact</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Lvl Exp List] body=[Exp needed each level] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=levelexplist">Lvl Exp List</a><br>
+                  </td>
+                  <td background="http://mythwar.thunderized.org/images/leftside2.gif" height="100%"></td>
+                </tr>
+                <tr>
+                  <td><img src="/images/sidecorner4.gif"></td>
+                  <td background="http://mythwar.thunderized.org/images/bottomside.gif" width="100%"></td>
+                  <td><img src="/images/sidecorner3.gif"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding-left:5px;padding-right:5px" class="content">
+              <script type="text/javascript">
+
+              var menu1=new Array()
+              menu1[0]='<a href="?sort=name">Name</a>'
+              menu1[1]='<a href="?sort=species">Species</a>'
+              menu1[2]='<a href="?sort=mingr">Minimum Gr</a>'
+              menu1[3]='<a href="?sort=maxgr">Maximum Gr</a>'
+              menu1[4]='<a href="?sort=sta">Sta</a>'
+              menu1[5]='<a href="?sort=int">Int</a>'
+              menu1[6]='<a href="?sort=str">Str</a>'
+              menu1[7]='<a href="?sort=agi">Agi</a>'
+              menu1[8]='<a href="?sort=stastar">Sta Stars</a>'
+              menu1[9]='<a href="?sort=intstar">Int Stars</a>'
+              menu1[10]='<a href="?sort=strstar">Str Stars</a>'
+              menu1[11]='<a href="?sort=agistar">Agi Stars</a>'
+              menu1[12]='<a href="?sort=skillI">Skill I</a>'
+              menu1[13]='<a href="?sort=skillII">Skill II</a>'
+              menu1[14]='<a href="?sort=skillIII">Skill III</a>'
+              menu1[15]='<a href="?sort=skillIV">Skill IV</a>'
+              menu1[16]='<a href="?sort=source">Source</a>'
+                
+              var menuwidth='165px' //default menu width
+              var menubgcolor='#5282B3'  //menu bgcolor
+              var disappeardelay=200  //menu disappear speed onMouseout (in miliseconds)
+              var hidemenu_onclick="yes" //hide menu when user clicks within menu?
+
+              /////No further editting needed
+
+              var ie4=document.all
+              var ns6=document.getElementById&&!document.all
+
+              if (ie4||ns6)
+              document.write('<div id="dropmenudiv" style="visibility:hidden;width:'+menuwidth+';background-color:'+menubgcolor+'" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+              function getposOffset(what, offsettype){
+              var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+              var parentEl=what.offsetParent;
+              while (parentEl!=null){
+              totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+              parentEl=parentEl.offsetParent;
+              }
+              return totaloffset;
+              }
+
+
+              function showhide(obj, e, visible, hidden, menuwidth){
+              if (ie4||ns6)
+              dropmenuobj.style.left=dropmenuobj.style.top="-500px"
+              if (menuwidth!=""){
+              dropmenuobj.widthobj=dropmenuobj.style
+              dropmenuobj.widthobj.width=menuwidth
+              }
+              if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+              obj.visibility=visible
+              else if (e.type=="click")
+              obj.visibility=hidden
+              }
+
+              function iecompattest(){
+              return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+              }
+
+              function clearbrowseredge(obj, whichedge){
+              var edgeoffset=0
+              if (whichedge=="rightedge"){
+              var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+              dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+              if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+              edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth
+              }
+              else{
+              var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset
+              var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+              dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+              if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ //move up?
+              edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight
+              if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) //up no good either?
+              edgeoffset=dropmenuobj.y+obj.offsetHeight-topedge
+              }
+              }
+              return edgeoffset
+              }
+
+              function populatemenu(what){
+              if (ie4||ns6)
+              dropmenuobj.innerHTML=what.join("")
+              }
+
+
+              function dropdownmenu(obj, e, menucontents, menuwidth){
+              if (window.event) event.cancelBubble=true
+              else if (e.stopPropagation) e.stopPropagation()
+              clearhidemenu()
+              dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+              populatemenu(menucontents)
+
+              if (ie4||ns6){
+              showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+              dropmenuobj.x=getposOffset(obj, "left")
+              dropmenuobj.y=getposOffset(obj, "top")
+              dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px"
+              dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px"
+              }
+
+              return clickreturnvalue()
+              }
+
+              function clickreturnvalue(){
+              if (ie4||ns6) return false
+              else return true
+              }
+
+              function contains_ns6(a, b) {
+              while (b.parentNode)
+              if ((b = b.parentNode) == a)
+              return true;
+              return false;
+              }
+
+              function dynamichide(e){
+              if (ie4&&!dropmenuobj.contains(e.toElement))
+              delayhidemenu()
+              else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+              delayhidemenu()
+              }
+
+              function hidemenu(e){
+              if (typeof dropmenuobj!="undefined"){
+              if (ie4||ns6)
+              dropmenuobj.style.visibility="hidden"
+              }
+              }
+
+              function delayhidemenu(){
+              if (ie4||ns6)
+              delayhide=setTimeout("hidemenu()",disappeardelay)
+              }
+
+              function clearhidemenu(){
+              if (typeof delayhide!="undefined")
+              clearTimeout(delayhide)
+              }
+
+              if (hidemenu_onclick=="yes")
+              document.onclick=hidemenu
+
+              </script> 
+              <script language='javascript'>
+
+
+              function change_url() {
+              document.location = "?find="+form1.find.value;
+              }
+              </script> 
+              <script type="text/javascript">
+
+
+
+              /* IMPORTANT: Put script after tooltip div or 
+              put tooltip div just before </BODY>. */
+
+              var dom = (document.getElementById) ? true : false;
+              var ns5 = (!document.all && dom || window.opera) ? true: false;
+              var ie5 = ((navigator.userAgent.indexOf("MSIE")>-1) && dom) ? true : false;
+              var ie4 = (document.all && !dom) ? true : false;
+              var nodyn = (!ns5 && !ie4 && !ie5 && !dom) ? true : false;
+
+              var origWidth, origHeight;
+
+              // avoid error of passing event object in older browsers
+              if (nodyn) { event = "nope" }
+
+              ///////////////////////  CUSTOMIZE HERE   ////////////////////
+              // settings for tooltip 
+              // Do you want tip to move when mouse moves over link?
+              var tipFollowMouse= true;       
+              // Be sure to set tipWidth wide enough for widest image
+              var tipWidth= 160;
+              var offX= 18;   // how far from mouse to show tip
+              var offY= 10; 
+              var tipFontFamily= "Arial";
+              //var tipFontFamily= "Verdana, arial, helvetica, sans-serif";
+              var tipFontSize= "9pt";
+              // set default text color and background color for tooltip here
+              // individual tooltips can have their own (set in messages arrays)
+              // but don't have to
+              var tipFontColor= "#EEDDAA";
+              var tipBgColor= "#DDECFF"; 
+              var tipBorderColor= "#956500";
+              var tipBorderWidth= 2;
+              var tipBorderStyle= "outset";
+              var tipPadding= 0;
+
+              // tooltip content goes here (image, description, optional bgColor, optional textcolor)
+              var messages = new Array();
+              // multi-dimensional arrays containing: 
+              // image and text for tooltip
+              // optional: bgColor and color to be sent to tooltip
+
+
+              messages[0] = new Array('',''); //avoid error
+              messages[1] = new Array('http://mythwar.thunderized.org/images/physical.gif','Defense will reduce all physicical attacks');     //defense
+              messages[2] = new Array('http://mythwar.thunderized.org/images/physical.gif','Physical attack hit rate');       //hitrate
+              messages[3] = new Array('http://mythwar.thunderized.org/images/physical.gif','Physical attack dodge rate');     //dodgerate
+              messages[4] = new Array('http://mythwar.thunderized.org/images/physical.gif','Pierce will decrease enemy\'s defense');  //pierce
+              messages[5] = new Array('http://mythwar.thunderized.org/images/physical.gif','Berserk will increase attack power');     //berserk
+              messages[6] = new Array('http://mythwar.thunderized.org/images/physical.gif','Critical will lower enemy\'s HP by a % of his total HP'); //critical
+              messages[7] = new Array('http://mythwar.thunderized.org/images/physical.gif','Chance to do combo');     //combo
+              messages[8] = new Array('http://mythwar.thunderized.org/images/physical.gif','Chance to do counter');   //counter
+              messages[9] = new Array('http://mythwar.thunderized.org/images/magical.gif','Reflect magic damage');    //magic reflect
+              messages[10] = new Array('http://mythwar.thunderized.org/images/magical.gif','Reflect physical damage');        //phys reflect
+              messages[11] = new Array('http://mythwar.thunderized.org/images/magical.gif','Lowers drain damage');    //drain
+              messages[12] = new Array('http://mythwar.thunderized.org/images/elemental.gif','Death resistance');     //death
+              messages[13] = new Array('http://mythwar.thunderized.org/images/magical.gif','Evil resistance');        //evil
+              messages[14] = new Array('http://mythwar.thunderized.org/images/magical.gif','Flash resistance');       //flash
+              messages[15] = new Array('http://mythwar.thunderized.org/images/magical.gif','Ice resistance'); //ice
+              messages[16] = new Array('http://mythwar.thunderized.org/images/magical.gif','Fire resistance');        //fire
+              messages[17] = new Array('http://mythwar.thunderized.org/images/physical.gif','Melee resistance');      //phys
+              messages[18] = new Array('http://mythwar.thunderized.org/images/elemental.gif','Poison resistance');    //poison
+              messages[19] = new Array('http://mythwar.thunderized.org/images/elemental.gif','Chaos resistance');     //chaos
+              messages[20] = new Array('http://mythwar.thunderized.org/images/elemental.gif','Stun resistance');      //stun
+              messages[21] = new Array('http://mythwar.thunderized.org/images/elemental.gif','Hypnotize resistance'); //hypno
+              messages[22] = new Array('http://mythwar.thunderized.org/images/elemental.gif','Frailty resistance');   //frail
+
+
+              ////////////////////  END OF CUSTOMIZATION AREA  ///////////////////
+
+              // preload images that are to appear in tooltip
+              // from arrays above
+              if (document.images) {
+              var theImgs = new Array();
+              for (var i=0; i<messages.length; i++) {
+              theImgs[i] = new Image();
+                theImgs[i].src = messages[i][0];
+              }
+              }
+
+              // to layout image and text, 2-row table, image centered in top cell
+              // these go in var tip in doTooltip function
+              // startStr goes before image, midStr goes between image and text
+              var startStr = '<div style="font:Arial;background-color:#000000"><table><tr><td><img src="';
+              var midStr = '" /><br>';
+              var endStr = '<br></tr></td></table></div>';
+
+              //var startStr = '<div style="font:Arial;background-color:#000000"><table bgcolor="#000000" width="100%" height="100%"><tr><td><img src="';
+              //var midStr = '"/><br>';
+              //var endStr = '<br></td></tr></table></div>';
+
+              ////////////////////////////////////////////////////////////
+              //  initTip     - initialization for tooltip.
+              //              Global variables for tooltip. 
+              //              Set styles
+              //              Set up mousemove capture if tipFollowMouse set true.
+              ////////////////////////////////////////////////////////////
+              var tooltip, tipcss;
+              function initTip() {
+              if (nodyn) return;
+              tooltip = (ie4)? document.all['tipDiv']: (ie5||ns5)? document.getElementById('tipDiv'): null;
+              tipcss = tooltip.style;
+              if (ie4||ie5||ns5) {    // ns4 would lose all this on rewrites
+                tipcss.width = tipWidth+"px";
+                tipcss.fontFamily = tipFontFamily;
+                tipcss.fontSize = tipFontSize;
+                tipcss.color = tipFontColor;
+                tipcss.backgroundColor = tipBgColor;
+                tipcss.borderColor = tipBorderColor;
+                tipcss.borderWidth = tipBorderWidth+"px";
+                tipcss.padding = tipPadding+"px";
+                tipcss.borderStyle = tipBorderStyle;
+              }
+              if (tooltip&&tipFollowMouse) {
+                document.onmousemove = trackMouse;
+              }
+              }
+
+              window.onload = initTip;
+
+              /////////////////////////////////////////////////
+              //  doTooltip function
+              //                      Assembles content for tooltip and writes 
+              //                      it to tipDiv
+              /////////////////////////////////////////////////
+              var t1,t2;      // for setTimeouts
+              var tipOn = false;      // check if over tooltip link
+              function doTooltip(evt,num) {
+              if (!tooltip) return;
+              if (t1) clearTimeout(t1);       if (t2) clearTimeout(t2);
+              tipOn = true;
+              // set colors if included in messages array
+              if (messages[num][2])   var curBgColor = messages[num][2];
+              else curBgColor = tipBgColor;
+              if (messages[num][3])   var curFontColor = messages[num][3];
+              else curFontColor = tipFontColor;
+              if (ie4||ie5||ns5) {
+                var tip = startStr + messages[num][0] + midStr + '<span style="font-family:' + tipFontFamily + '; font-size:' + tipFontSize + '; color:' + curFontColor + ';">' + messages[num][1] + '</span>' + endStr;
+                tipcss.backgroundColor = curBgColor;
+                tooltip.innerHTML = tip;
+              }
+              if (!tipFollowMouse) positionTip(evt);
+              else t1=setTimeout("tipcss.visibility='visible'",100);
+              }
+
+              var mouseX, mouseY;
+              function trackMouse(evt) {
+              standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+              mouseX = (ns5)? evt.pageX: window.event.clientX + standardbody.scrollLeft;
+              mouseY = (ns5)? evt.pageY: window.event.clientY + standardbody.scrollTop;
+              if (tipOn) positionTip(evt);
+              }
+
+              /////////////////////////////////////////////////////////////
+              //  positionTip function
+              //              If tipFollowMouse set false, so trackMouse function
+              //              not being used, get position of mouseover event.
+              //              Calculations use mouseover event position, 
+              //              offset amounts and tooltip width to position
+              //              tooltip within window.
+              /////////////////////////////////////////////////////////////
+              function positionTip(evt) {
+              if (!tipFollowMouse) {
+                mouseX = (ns5)? evt.pageX: window.event.clientX + standardbody.scrollLeft;
+                mouseY = (ns5)? evt.pageY: window.event.clientY + standardbody.scrollTop;
+              }
+              // tooltip width and height
+              var tpWd = (ie4||ie5)? tooltip.clientWidth: tooltip.offsetWidth;
+              var tpHt = (ie4||ie5)? tooltip.clientHeight: tooltip.offsetHeight;
+              // document area in view (subtract scrollbar width for ns)
+              var winWd = (ns5)? window.innerWidth-20+window.pageXOffset: standardbody.clientWidth+standardbody.scrollLeft;
+              var winHt = (ns5)? window.innerHeight-20+window.pageYOffset: standardbody.clientHeight+standardbody.scrollTop;
+              // check mouse position against tip and window dimensions
+              // and position the tooltip 
+              if ((mouseX+offX+tpWd)>winWd) 
+                tipcss.left = mouseX-(tpWd+offX)+"px";
+              else tipcss.left = mouseX+offX+"px";
+              if ((mouseY+offY+tpHt)>winHt) 
+                tipcss.top = winHt-(tpHt+offY)+"px";
+              else tipcss.top = mouseY+offY+"px";
+              if (!tipFollowMouse) t1=setTimeout("tipcss.visibility='visible'",100);
+              }
+
+              function hideTip() {
+              if (!tooltip) return;
+              t2=setTimeout("tipcss.visibility='hidden'",100);
+              tipOn = false;
+              }
+
+              document.write('<div id="tipDiv" style="position:absolute; visibility:hidden; z-index:100"></div>')
+
+              </script>
+              <div align="right"></div>
+              <form name='form1' class="searchfield" id="form1">
+                <input type='text' name='find' class="searchfield" value='Giantslicer'> <input type='submit' value='Search' class="searchbutton">
+              </form>1 pets found
+              <table class="petstable">
+                <tr>
+                  <td colspan="4" class="petsname">
+                    <span style="font-family:'http://mythwar.thunderized.org/dynamic/LITHOGRB.TTF';font-size:24;color:#06355A"><b>Giantslicer</b></span> <a align="center" name='31' href="./pets.php#31" style="color:#09101A" id="31"><font size="-2"><b>Giantslicer</b> <i>(#31)</i></font><i></i></a>
+                  </td>
+                  <td rowspan="7" class="petsresist">
+                    <div onmouseover="doTooltip(event,2)" onmouseout="hideTip()">
+                      Hit Rate<font color="white">: 100</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,3)" onmouseout="hideTip()">
+                      Dodge Rate<font color="white">: 5</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,1)" onmouseout="hideTip()">
+                      Defense<font color="white">: 0</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,17)" onmouseout="hideTip()">
+                      Melee<font color="white">: 12</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,4)" onmouseout="hideTip()">
+                      Pierce<font color="white">: 0% 0</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,5)" onmouseout="hideTip()">
+                      Berserk<font color="white">: 0% 0</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,6)" onmouseout="hideTip()">
+                      Critical<font color="white">: 0% 0</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,7)" onmouseout="hideTip()">
+                      Combo<font color="white">: 0% 0</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,8)" onmouseout="hideTip()">
+                      Counter<font color="white">: 0% 0</font>
+                    </div>
+                  </td>
+                  <td rowspan="7" class="petsresist">
+                    <div onmouseover="doTooltip(event,13)" onmouseout="hideTip()">
+                      Evil<font color="white">: 15</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,14)" onmouseout="hideTip()">
+                      Flash<font color="white">: 4</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,15)" onmouseout="hideTip()">
+                      Ice<font color="white">: 4</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,16)" onmouseout="hideTip()">
+                      Fire<font color="white">: 4</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,11)" onmouseout="hideTip()">
+                      Drain<font color="white">: 3</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,10)" onmouseout="hideTip()">
+                      Melee reflect<font color="white">: 0% 0</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,9)" onmouseout="hideTip()">
+                      Magic reflect<font color="white">: 0% 0</font>
+                    </div>
+                  </td>
+                  <td rowspan="7" class="petsresist">
+                    <div onmouseover="doTooltip(event,12)" onmouseout="hideTip()">
+                      Death<font color="white">: 0</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,18)" onmouseout="hideTip()">
+                      Poison<font color="white">: 3</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,19)" onmouseout="hideTip()">
+                      Chaos<font color="white">: 3</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,20)" onmouseout="hideTip()">
+                      Stun<font color="white">: 3</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,21)" onmouseout="hideTip()">
+                      Hypnotize<font color="white">: 3</font>
+                    </div>
+                    <div onmouseover="doTooltip(event,22)" onmouseout="hideTip()">
+                      Frailty<font color="white">: 3</font>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="petsspecies"><i>Species:</i> Undead</td>
+                  <td class="petsgr" colspan="3"><i>GR:</i> 1.166 - 1.199</td>
+                </tr>
+                <tr>
+                  <td class="petspic" rowspan="5" align="center" title="header=[Most common build for Giantslicer] body=[&lt;b&gt;Pure sta, 3 sta 1 int&lt;/b&gt;&lt;br&gt;&lt;i&gt;This is &lt;u&gt;not&lt;/u&gt; necessary the best build!&lt;/i&gt;] "><img src="/images/pets/Giantslicer.gif"></td>
+                  <td class="petsskill">
+                    <a href="./petskill.php?skill=Evil" i="">Evil I</a>
+                  </td>
+                  <td class="petsnothing" rowspan="4">&nbsp;</td>
+                  <td class="petsstats" colspan="1">Sta: &#9733;&#9733;&#9733;&#9733; (148)</td>
+                </tr>
+                <tr>
+                  <td class="petsskill">
+                    <a href="./petskill.php?skill=Evil" ii="">Evil II</a>
+                  </td>
+                  <td class="petsstats" colspan="1">Int: &#9733;&#9733;&#9733;&#9734; (268)</td>
+                </tr>
+                <tr>
+                  <td class="petsskill">
+                    <a href="./petskill.php?skill=Evil" iii="">Evil III</a>
+                  </td>
+                  <td class="petsstats" colspan="1">Str: &#9733;&#9734; (21)</td>
+                </tr>
+                <tr>
+                  <td class="petsskill">
+                    <a href="./petskill.php?skill=Evil" iv="">Evil IV</a>
+                  </td>
+                  <td class="petsstats" colspan="1">Agi: &#9733;&#9733;&#9734; (90)</td>
+                </tr>
+                <tr>
+                  <td class="petswaytoget" colspan="3"><i>Source:</i> Fantastic Whammy Egg</td>
+                </tr>
+              </table><br>
+              <br>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="35px" background="http://mythwar.thunderized.org/images/leftside.gif"></td>
+      <td height="30px" background="http://mythwar.thunderized.org/images/copyrightbg.gif" class="copyright">
+        &copy; All copyright reserved. Found any mistakes? Is something missing or want your guide to be posted? Mail to <a href="mailto:wander@thunderized.org">Wander@thunderized.org</a> or <a href="/index.php?act=contact">click here</a>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

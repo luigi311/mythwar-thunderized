@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pets - About pets</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="/js/boxover.js"></script>
+</head>
+<body>
+  <table border="0" width="100%" height="100%">
+    <tr>
+      <td width="35px" background="http://mythwar.thunderized.org/images/leftside.gif"></td>
+      <td height="1px">
+        <table width="100%" height="91px" cellpadding="0" cellspacing="0">
+          <tr height="61px">
+            <td width="500px">
+              <a href="/index.php" title="Home"><img src="/images/logo.gif" border="0"></a>
+            </td>
+            <td width="100%">
+              <a href="/index.php" title="Home"><img src="/images/logobg.gif" height="61px" width="100%" border="0"></a>
+            </td>
+            <td background="http://mythwar.thunderized.org/images/logobg.gif">
+              <a href="/index.php" title="Home"><img src="/images/logoright.gif" border="0"></a>
+            </td>
+          </tr>
+          <tr height="30px">
+            <td background="http://mythwar.thunderized.org/images/logobottombg.gif">
+              <a href="/index.php" title="Home"><img src="/images/logobottom.gif" border="0"></a>
+            </td>
+            <td background="http://mythwar.thunderized.org/images/logobottombg.gif" colspan="2" style="padding:4">
+              <a href="http://forum.thunderized.org/">Thunderized Forum</a> &middot; <a href="http://www.fieryhub.net/forum/">Pandora Forum</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td rowspan="3" width="35px" background="http://mythwar.thunderized.org/images/rightside.gif"></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table width="100%" height="100%">
+          <tr>
+            <td width="203px" class="menu">
+              <table height="100%" width="100%">
+                <tr>
+                  <td><img src="/images/sidecorner1.gif"></td>
+                  <td background="http://mythwar.thunderized.org/images/topside.gif" width="100%"></td>
+                  <td><img src="/images/sidecorner2.gif"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img title="available_pages" src="/images/available_pages.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[FAQ] body=[Skill levels, gold limit, ranks and much more] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=faq">FAQ</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Maps] body=[Overview of all maps] delay=[1000] fade=[on] fadespeed=[0.2]" href="/maps.php">Maps</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[NPCs] body=[Overview of all npcs] delay=[1000] fade=[on] fadespeed=[0.2]" href="/npcs.php">NPCs</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Time Calculator] body=[Calculate activity times to your time zone] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=timecalc">Time Calculator</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Quest Mobs] body=[Info about quest monsters] delay=[1000] fade=[on] fadespeed=[0.2]" href="/questmonsters.php">Quest Mobs</a><br>
+                    <img title="quests" src="/images/quests.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Bounty Quest] body=[Bounty Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=bounty">Bounty Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Ceasar Quest] body=[Ceasar Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ceasar">Ceasar Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Drowcrusher] body=[Drowcrusher Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=drowcrusher">Drowcrusher</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Drow Lord] body=[Drow Lord Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=drowlord">Drow Lord</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Errand Quest] body=[Errand Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=errand">Errand Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Firelord Quest] body=[Firelord Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=firelord">Firelord Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Guild Quest] body=[Guild Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=guildquest">Guild Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Hellion Quest] body=[Hellion Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=hellion">Hellion Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Hurricanes] body=[Hurricane Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=hurricane">Hurricanes</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Mokka Quest] body=[Mokka Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=mokka">Mokka Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Seal Quest] body=[Sealed Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=seal">Seal Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Spirit Hunting] body=[Spirit Hunting] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=spirits">Spirit Hunting</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Thief Quest] body=[Thief Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=thief">Thief Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Wood Defender] body=[Woodlingor Defender Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=wooddef">Wood Defender</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Worn Deity] body=[Worn Deity Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=worndeity">Worn Deity</a><br>
+                    <img title="reborning" src="/images/reborning.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Light] body=[Soulstone of Light Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssol">SS of Light</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Dark] body=[Soulstone of Dark Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssod">SS of Dark</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Fire] body=[Soulstone of Fire Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssof">SS of Fire</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Ice] body=[Soulstone of Ice Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssoi">SS of Ice</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Wind] body=[Soulstone of Wind Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=ssow">SS of Wind</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Reborn Quest] body=[Reborn Qest Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=reborn">Reborn Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Reborn Guide] body=[Guide about reborn] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=rebornguide">Reborn Guide</a><br>
+                    <img title="other_guides" src="/images/other_guides.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[AOD's] body=[Information about Armors of Dreams] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=aods">AOD's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Equipment] body=[Equipment Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=equipment">Equipment</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Forging] body=[Guide about forging] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=forging">Forging</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Gems] body=[Guide about gems] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=gems">Gems</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Shapeshift I] body=[Shapeshifting info and source] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=shapeshift">Shapeshift I</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Shapeshift II] body=[Shapeshift Potions Stats] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=shapeshift2">Shapeshift II</a><br>
+                    <img title="pet_stuff" src="/images/pet_stuff.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[About Pets] body=[Basic information about pets] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=aboutpets">About Pets</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[All Pets] body=[All pets and their stats, resist and more] delay=[1000] fade=[on] fadespeed=[0.2]" href="/pets.php">All Pets</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Intimacy] body=[Information about pet intimacy] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petintimacy">Intimacy</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet NPC's] body=[NPC's for pets] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petnpcs">Pet NPC's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet Reborn] body=[Guide about reborning a pet] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petreborn">Pet Reborn</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet Skills] body=[Pet skills info, and what pets have it] delay=[1000] fade=[on] fadespeed=[0.2]" href="/petskill.php">Pet Skills</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Resistance] body=[Guide about pet resistance] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=petresist">Resistance</a><br>
+                    <img title="activitys" src="/images/activitys.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Crab] body=[Guide about crab activity] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=crab">Crab</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Flurry] body=[Guide about lottery activity] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=flurry">Flurry</a><br>
+                    <img title="misc" src="/images/misc.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Skill Calculator] body=[Fill in your exp and see how much you need!] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=skillcalc">Skill Calculator</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Wallpapers] body=[Myth War Wallpapers] delay=[1000] fade=[on] fadespeed=[0.2]" href="/wallpapers.php">Wallpapers</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Story's] body=[Story's] delay=[1000] fade=[on] fadespeed=[0.2]" href="/story.php?story=all">Story's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Items] body=[Myth War Items] delay=[1000] fade=[on] fadespeed=[0.2]" href="/items.php">Items</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Symbol Codes] body=[Read how to use symbols like '" and="" more="" in="" myth="" delay="[1000]" fade="[on]" fadespeed="[0.2]&quot;" href="/guide.php?guide=symbols">Symbol Codes</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Fake Npc Msg] body=[Make a fake npc message!] delay=[1000] fade=[on] fadespeed=[0.2]" href="/faker.php">Fake Npc Msg</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[MW Links] body=[MythWar related links] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=links">MW Links</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Search] body=[Search] delay=[1000] fade=[on] fadespeed=[0.2]" href="/index.php?act=search">Search</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Contact] body=[Contact] delay=[1000] fade=[on] fadespeed=[0.2]" href="/index.php?act=contact">Contact</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Lvl Exp List] body=[Exp needed each level] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=levelexplist">Lvl Exp List</a><br>
+                  </td>
+                  <td background="http://mythwar.thunderized.org/images/leftside2.gif" height="100%"></td>
+                </tr>
+                <tr>
+                  <td><img src="/images/sidecorner4.gif"></td>
+                  <td background="http://mythwar.thunderized.org/images/bottomside.gif" width="100%"></td>
+                  <td><img src="/images/sidecorner3.gif"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding-left:5px;padding-right:5px" class="content">
+              <h1>About Pets</h1>
+              <h3>What are pets</h3>
+              <p>Pets are important in MythWarOnline as they play a major roles in battle.</p>
+              <p>Every main character is allowed to keep a maximum of 20 pets.</p>
+              <p>Pets will always be able to level up faster than the main characters. (it will get twice the exp the char received)</p>
+              <p>There are many ways a pet can be use depending on its resistance, skill and attributes</p>
+              <h3>Pets Status Screen</h3>
+              <table width="90%" border="0">
+                <tr>
+                  <td colspan="2"><img src="/images/guides/petstatus.png"></td>
+                  <td width="59%">
+                    <div align="center">
+                      <table width="100%" border="1" bordercolor="#3399FF">
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Name
+                            </div>
+                          </td>
+                          <td>When you receive a pet, the name is the default given by the Mythwar dev. You can simply click the box beside the name and press enter after you have type the name you wish to change the name of your pet. Note that space are not allowed.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Species
+                            </div>
+                          </td>
+                          <td>The class this pet belongs to. There are the Flying, Human, Special, Dragon, Undead, Demon,</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Level
+                            </div>
+                          </td>
+                          <td>The level of you current pet.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Loyalty
+                            </div>
+                          </td>
+                          <td>The loyalty of your pet. Default is at 100. Whenever is dies during a battle it loses 20 loyalty point, and whenever it level up it change back to 100. Once loyalty reaches 40 and below the pet will not follow your instruction during battle. Pet will not run away even at 0 loyalty. Simply use a loyalty stone to restore to 100.</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Health
+                            </div>
+                          </td>
+                          <td>The Health point of your pet. Current hp / Maximum HP</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Mana
+                            </div>
+                          </td>
+                          <td>The Magic point of your pet. Current MP / Maximum MP</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <div align="center">
+                      <table width="100%" border="1" bordercolor="#3399FF">
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Attack
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              The Base Damage your pet can deal on the target
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Speed
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              The Speed of your pet. Determins how fast the pet turn come during battle
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Exp
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              The Total exp point your pet has earned at that lvl. Current Exp / Exp needed to level. At the end of the experience box is some green color number. That is the current Growth rate of your pet.
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Stats Point
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Whenever your pet level you be given 4 stats point. Use the Positive and Negative icon to raise the stats.
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Sta
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Determins the HP of your pet
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Int
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Determins the MP of your pet and magical damage (if any)
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Str
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Determins the Attack rating
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Agi
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Determins the Speed rating
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Battle
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Click to choose the pet youwish to use during battle
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Follow
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Click to let your pet follow behind you while you are moving around Mythwar. Max GR pet will have a shiny effect.
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Dismiss
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Click to dismiss your pet from your service. Another box will appears to confirm your choice.
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Item
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Click to allow pet to use HP or MP potion / items
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc">
+                              Confirm
+                            </div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              After you have set the Stats point over your attributes you need to press confirm before the changes is register
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc"><img src="/images/guides/a.jpg"></div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Click to Display the Physical Attribute (Hit rate, Dodge rate, Defense, Melee Resistance, Pierce / Damage, Berserk Rate/Damage, Critical Rate/Damage/Resistance , Combo Hit/Rate, Counter Attack Rate/ Damage)
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc"><img src="/images/guides/b.jpg"></div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Click to Display the Magical Attribute (Evil resistance, Flash resistance, Ice resistance, Fire resistance, Drain resistance, Melee Reflect/Damage, Magic Reflect/Damage)
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="questdisc"><img src="/images/guides/c.jpg"></div>
+                          </td>
+                          <td>
+                            <div align="justify">
+                              Click to Display Elemental Attributes (Death resistance, Posion resistance, Chaos resistance, Stun resistance, Hypnotize resistance, Frailty resistance)
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <h3>Pet Battle Selection</h3>
+              <div align="center"><img src="/images/guides/petbattlechoice.jpg"></div><br>
+              <table width="90%" border="1" bordercolor="#3399FF">
+                <tr>
+                  <td width="14%">
+                    <div class="questdisc">
+                      Attack
+                    </div>
+                  </td>
+                  <td width="86%">Instruct Pet to perform a melee attack on target</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="questdisc">
+                      Skills
+                    </div>
+                  </td>
+                  <td>Instruct Pet to use spells eg. enhance, flash</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="questdisc">
+                      Bag
+                    </div>
+                  </td>
+                  <td>Instruct Pet to use an item from your inventory.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="questdisc">
+                      Defend
+                    </div>
+                  </td>
+                  <td>Instruct Pet to protect a party member or other pet. When the pet or member is being targeted with a melee attack, your pet will &quot;jump in&quot; to take the damage instead.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="questdisc">
+                      Dodge
+                    </div>
+                  </td>
+                  <td>Instruct pet to take up defend position, will take less damage from enemies.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="questdisc">
+                      Change
+                    </div>
+                  </td>
+                  <td>Change to another pet at the next turn. A pet in choas, stun and hypno mode cannot be change if you are also in stun choas and hypno mode otherwise, pet can be change by taking up a turn of yours</td>
+                </tr>
+              </table>
+              <h3><a href="/items.php?cat=Pet%20Items">Items for pets usage</a></h3>
+              <table width="99%" border="1" bordercolor="#3399FF">
+                <tr>
+                  <td class="pic" width="14%">
+                    <div class="questdisc">
+                      Name
+                    </div>
+                  </td>
+                  <td width="45%">
+                    <div class="questdisc">
+                      What is this item for
+                    </div>
+                  </td>
+                  <td width="10%">
+                    <div class="questdisc">
+                      Will it affect any added resistance (Crystal)
+                    </div>
+                  </td>
+                  <td width="10%">
+                    <div class="questdisc">
+                      Will it affect Growth Rate
+                    </div>
+                  </td>
+                  <td width="10%">
+                    <div class="questdisc">
+                      Will it reset Dragon Eyes /Bones
+                    </div>
+                  </td>
+                  <td width="10%">
+                    <div class="questdisc">
+                      Will it affect Intimacy
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/som.PNG"></div>
+                    <div class="questdisc">
+                      Stone of Moon
+                    </div>
+                  </td>
+                  <td>Use to reset pet stats while retaining its current level. Available in Item Mall at 80mp. Can be won from Lost Cave. Give to Gado to use item.</td>
+                  <td>
+                    <div align="center">
+                      Yes. Will be reset to it initial resist.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      Yes.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      Yes.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/soc.PNG"></div>
+                    <div class="questdisc">
+                      Stone of Curses
+                    </div>
+                  </td>
+                  <td>-Use to reset resistance added to pet using crystal to its intial resit. Available in Item Mall only cost 25mp each. Also Available as a bag consiting of 5 Stone of Curses at 89mp. Press Use to use item.</td>
+                  <td>
+                    <div align="center">
+                      Yes. Will be reset to it initial resist.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/sod.PNG"></div>
+                    <div class="questdisc">
+                      Stone of Dream
+                    </div>
+                  </td>
+                  <td>Use to reset pet level to 1. Mostly use for reseting of GR. Available in Item Mall only cost 30mp each. Also Available as a bag consiting of 10 Stone of Dream at 229mp. Give to Pet Researcher to use item.</td>
+                  <td>
+                    <div align="center">
+                      Yes. Will be reset to it initial resist.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      Yes.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      Yes.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      Yes. Reset to 0
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/loyaltystone.PNG"></div>
+                    <div class="questdisc">
+                      Loyalty Stone
+                    </div>
+                  </td>
+                  <td>Use to increase pet loyalty to 100. Avilable at any Groceror for 4k gold. Press Use to use item.</td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/fruit.PNG"></div>
+                    <div class="questdisc">
+                      Mystical Fruits
+                    </div>
+                  </td>
+                  <td>Use to increase pet experience. Avilable in 50k, 100k, 600k, 1.2m and 1.5m. Can be found in treasure box (in battle), Hellion Quest, Nelson Quest, Rewards for Guild War. Press Use to use item.</td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/crystal1.PNG"></div>
+                    <div class="questdisc">
+                      Crystal +1
+                    </div>
+                  </td>
+                  <td>Use to increase pet resitance at lvl 30. Available at Crystal Seller NPC Blyton 260 460 for 100k gold. Can received as a reward for killing spirit at level 1 Demon lair and Evil lair. Give to Baia or Nexo or Korandji to use.</td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/crystal2.PNG"></div>
+                    <div class="questdisc">
+                      Crystal +2
+                    </div>
+                  </td>
+                  <td>Use to increase pet resitance at lvl 50. Crystal +1 is required to be use beforehand. Available at Crystal Seller NPC Blyton 260 460 for 150k gold. Can received as a reward for killing spirit at level 2 Demon lair and Evil lair. Give to Baia or Nexo or Korandji to use.</td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/crystal3.PNG"></div>
+                    <div class="questdisc">
+                      Crystal +3
+                    </div>
+                  </td>
+                  <td>Use to increase pet resitance at lvl 70. Crystal +1 +2 is required to be use beforehand.Available at Crystal Seller NPC Blyton 260 460 for 200k gold. Can received as a reward for killing spirit at level 3 Demon lair and Evil lair. Give to Baia or Nexo or Korandji to use.</td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/crystal4.PNG"></div>
+                    <div class="questdisc">
+                      Crystal +4
+                    </div>
+                  </td>
+                  <td>Use to increase pet resitance after pet reborned. Crystal +1 +2 +3 is required to be use beforehand. Available at Crystal Seller NPC Blyton 260 460 for 300k gold. Can received as a reward for killing spirit at level 4 Demon lair and Evil lair. Give to Baia or Nexo or Korandji to use.</td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/crystal5.PNG"></div>
+                    <div class="questdisc">
+                      Crystal +5
+                    </div>
+                  </td>
+                  <td>Use to increase pet resitance after pet reborned. Crystal +1 +2 +3 +4 is required to be use beforehand. Available at Crystal Seller NPC Blyton 260 460 for 500k gold. Can received as a reward for killing spirit at level 5 Demon lair and Evil lair. Give to Baia or Nexo or Korandji to use.</td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/dragoneye.PNG"></div>
+                    <div class="questdisc">
+                      Dragon Eyes
+                    </div>
+                  </td>
+                  <td>Increase pet's GR by 0.1. Only 1 can be use per pet. For sales in Item Mall only at 100mp. Press use to use the item</td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      Yes. Increment of 0.1
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pic">
+                    <div align="center"><img src="/images/items/dragonbone.PNG"></div>
+                    <div class="questdisc">
+                      Dragon Bones
+                    </div>
+                  </td>
+                  <td>Increase pet's GR by 0.01. A maximum of 4 can be use per pet. For sales in Item Mall only at 100mp. Press use to use the item</td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      Yes. Increment of 0.01
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                  <td>
+                    <div align="center">
+                      No.
+                    </div>
+                  </td>
+                </tr>
+              </table><br>
+              <p><b><font color="#00FF00">NOTE:</font></b> When Pets Hits max GR it shines(sparkle or watever). But there are cases when pet is 0.01 less of its max gr it shines too but once u relog the shiny thing disappear (eg.AURORA lion) but there are some that remains shiny (eg. bloodpede)</p><br>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="35px" background="http://mythwar.thunderized.org/images/leftside.gif"></td>
+      <td height="30px" background="http://mythwar.thunderized.org/images/copyrightbg.gif" class="copyright">
+        &copy; All copyright reserved. Found any mistakes? Is something missing or want your guide to be posted? Mail to <a href="mailto:wander@thunderized.org">Wander@thunderized.org</a> or <a href="/index.php?act=contact">click here</a>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

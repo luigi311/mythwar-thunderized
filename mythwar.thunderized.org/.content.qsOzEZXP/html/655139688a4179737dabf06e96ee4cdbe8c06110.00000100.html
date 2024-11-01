@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skill Calculator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <script src="/js/boxover.js"></script>
+  <style type="text/css">
+                <!--/*<![CDATA[*/
+                #Data_Table{
+                        display:none;
+                }
+                input[id$="_Input"]{
+                        width:50px;
+                }
+                #Data_Table tr td{
+                        vertical-align:top;
+                }
+                /*]]>*/-->
+  </style>
+</head>
+<body>
+  <table border="0" width="100%" height="100%">
+    <tr>
+      <td width="35px" background="http://mythwar.thunderized.org/images/leftside.gif"></td>
+      <td height="1px">
+        <table width="100%" height="91px" cellpadding="0" cellspacing="0">
+          <tr height="61px">
+            <td width="500px">
+              <a href="/index.php" title="Home"><img src="/images/logo.gif" border="0"></a>
+            </td>
+            <td width="100%">
+              <a href="/index.php" title="Home"><img src="/images/logobg.gif" height="61px" width="100%" border="0"></a>
+            </td>
+            <td background="http://mythwar.thunderized.org/images/logobg.gif">
+              <a href="/index.php" title="Home"><img src="/images/logoright.gif" border="0"></a>
+            </td>
+          </tr>
+          <tr height="30px">
+            <td background="http://mythwar.thunderized.org/images/logobottombg.gif">
+              <a href="/index.php" title="Home"><img src="/images/logobottom.gif" border="0"></a>
+            </td>
+            <td background="http://mythwar.thunderized.org/images/logobottombg.gif" colspan="2" style="padding:4">
+              <a href="http://forum.thunderized.org/">Thunderized Forum</a> &middot; <a href="http://pandora.servegame.com/">Pandora Home</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td rowspan="3" width="35px" background="http://mythwar.thunderized.org/images/rightside.gif"></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table width="100%" height="100%">
+          <tr>
+            <td width="203px" class="menu">
+              <table height="100%" width="100%">
+                <tr>
+                  <td><img src="/images/sidecorner1.gif"></td>
+                  <td background="http://mythwar.thunderized.org/images/topside.gif" width="100%"></td>
+                  <td><img src="/images/sidecorner2.gif"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img title="available_pages" src="/images/available_pages.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[FAQ] body=[Skill levels, gold limit, ranks and much more] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide?guide=faq">FAQ</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Maps] body=[Overview of all maps] delay=[1000] fade=[on] fadespeed=[0.2]" href="/maps.php">Maps</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[NPCs] body=[Overview of all npcs] delay=[1000] fade=[on] fadespeed=[0.2]" href="/npcs.php">NPCs</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Time Calculator] body=[Calculate activity times to your time zone] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide.php?guide=timecalc">Time Calculator</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Quest Mobs] body=[Info about quest monsters] delay=[1000] fade=[on] fadespeed=[0.2]" href="/questmonsters.php">Quest Mobs</a><br>
+                    <img title="quests" src="/images/quests.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Bounty Quest] body=[Bounty Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:bounty">Bounty Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Ceasar Quest] body=[Ceasar Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:ceasar">Ceasar Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Drowcrusher] body=[Drowcrusher Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:drowcrusher">Drowcrusher</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Drow Lord] body=[Drow Lord Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:drowlord">Drow Lord</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Errand Quest] body=[Errand Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:errand">Errand Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Firelord Quest] body=[Firelord Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:firelord">Firelord Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Guild Quest] body=[Guild Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:guildquest">Guild Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Hellion Quest] body=[Hellion Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:hellion">Hellion Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Hurricanes] body=[Hurricane Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:hurricane">Hurricanes</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Mokka Quest] body=[Mokka Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:mokka">Mokka Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Seal Quest] body=[Sealed Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:seal">Seal Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Spirit Hunting] body=[Spirit Hunting] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:spirits">Spirit Hunting</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Thief Quest] body=[Thief Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:thief">Thief Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Wood Defender] body=[Woodlingor Defender Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:wooddef">Wood Defender</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Worn Deity] body=[Worn Deity Quest] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:worndeity">Worn Deity</a><br>
+                    <img title="reborning" src="/images/reborning.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Light] body=[Soulstone of Light Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:ssol">SS of Light</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Dark] body=[Soulstone of Dark Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:ssod">SS of Dark</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Fire] body=[Soulstone of Fire Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:ssof">SS of Fire</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Ice] body=[Soulstone of Ice Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:ssoi">SS of Ice</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[SS of Wind] body=[Soulstone of Wind Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:ssow">SS of Wind</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Reborn Quest] body=[Reborn Qest Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:reborn">Reborn Quest</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Reborn Guide] body=[Guide about reborn] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:rebornguide">Reborn Guide</a><br>
+                    <img title="other_guides" src="/images/other_guides.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[AOD's] body=[Information about Armors of Dreams] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:aods">AOD's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Equipment] body=[Equipment Guide] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:equipment">Equipment</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Forging] body=[Guide about forging] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:forging">Forging</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Gems] body=[Guide about gems] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:gems">Gems</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Shapeshift I] body=[Shapeshifting info and source] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:shapeshift">Shapeshift I</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Shapeshift II] body=[Shapeshift Potions Stats] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:shapeshift2">Shapeshift II</a><br>
+                    <img title="pet_stuff" src="/images/pet_stuff.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[About Pets] body=[Basic information about pets] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:aboutpets">About Pets</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[All Pets] body=[All pets and their stats, resist and more] delay=[1000] fade=[on] fadespeed=[0.2]" href="/pets.php">All Pets</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet Compare] body=[Compare all attributes of 2 pets] delay=[1000] fade=[on] fadespeed=[0.2]" href="/petcompare.php">Pet Compare</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Intimacy] body=[Information about pet intimacy] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:petintimacy">Intimacy</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet NPC's] body=[NPC's for pets] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:petnpcs">Pet NPC's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet Reborn] body=[Guide about reborning a pet] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:petreborn">Pet Reborn</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Pet Skills] body=[Pet skills info, and what pets have it] delay=[1000] fade=[on] fadespeed=[0.2]" href="/petskill.php">Pet Skills</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Resistance] body=[Guide about pet resistance] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:petresist">Resistance</a><br>
+                    <img title="activitys" src="/images/activitys.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Crab] body=[Guide about crab activity] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:crab">Crab</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Flurry] body=[Guide about lottery activity] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:flurry">Flurry</a><br>
+                    <img title="misc" src="/images/misc.png"><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Skill Calculator] body=[Fill in your exp and see how much you need!] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:skillcalc">Skill Calculator</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Wallpapers] body=[Myth War Wallpapers] delay=[1000] fade=[on] fadespeed=[0.2]" href="/wallpapers.php">Wallpapers</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[#c colors] body=[#c code color picker] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:hexcodes">#c Colorpicker</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Story's] body=[Story's] delay=[1000] fade=[on] fadespeed=[0.2]" href="/story.php?story=all">Story's</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Items] body=[Myth War Items] delay=[1000] fade=[on] fadespeed=[0.2]" href="/items.php">Items</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Symbol Codes] body=[Read how to use symbols like '™' and more in Myth War] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:symbols">Symbol Codes</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Fake Npc Msg] body=[Make a fake npc message!] delay=[1000] fade=[on] fadespeed=[0.2]" href="/faker.php">Fake Npc Msg</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[MW Links] body=[MythWar related links] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:links">MW Links</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Search] body=[Search] delay=[1000] fade=[on] fadespeed=[0.2]" href="/index.php?act=search">Search</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Contact] body=[Contact] delay=[1000] fade=[on] fadespeed=[0.2]" href="/index.php?act=contact">Contact</a><br>
+                    <img src="/images/arrow.gif" class="a"> <a title="header=[Lvl Exp List] body=[Exp needed each level] delay=[1000] fade=[on] fadespeed=[0.2]" href="/guide:levelexplist">Lvl Exp List</a><br>
+                    <script type="text/javascript">
+
+
+                        <!--
+                        google_ad_client = "pub-9253893867727909";
+                        /* Get Firefox (bigger) */
+                        google_ad_slot = "8463461866";  // 6295926403
+                        google_ad_width = 110;  // 125
+                        google_ad_height = 32;  // 125
+                        google_cpa_choice = ""; // on file
+                        //-->
+                    </script>
+                  </td>
+                  <td background="http://mythwar.thunderized.org/images/leftside2.gif" height="100%"></td>
+                </tr>
+                <tr>
+                  <td><img src="/images/sidecorner4.gif"></td>
+                  <td background="http://mythwar.thunderized.org/images/bottomside.gif" width="100%"></td>
+                  <td><img src="/images/sidecorner3.gif"></td>
+                </tr>
+              </table>
+            </td>
+            <td style="padding-left:5px;padding-right:5px" class="content">
+              <script type="text/javascript">
+                <!--//<![CDATA[
+                function hide_tables(){
+                        document.getElementById("Data_Table").style.display = "none";
+                }
+                function choose_race(race){
+                        hide_tables();
+                        if(race=="IE"){
+                                race = document.getElementById("choose_race").value;
+                        }
+                        document.getElementById("Data_Table").style.display = "block";
+                        skill   = new Array();
+                        switch(race){
+                                case"Male_Human":skill=Array("Frailty","Chaos","Hypnotize","Stun");break;
+                                case"Male_Centaur":skill=Array("Purge Chaos","Multishot","Speed","Heal Other");break;
+                                case"Male_Mage":skill=Array("Fire","Evil","Flash","Death");break;
+                                case"Male_Borg":skill=Array("Enhance","Drain","Reflect","Repel");break;
+                                case"Female_Human":skill=Array("Poison","Chaos","Hypnotize","Stun");break;
+                                case"Female_Centaur":skill=Array("Un-stun","Blizzard","Speed","Heal Other");break;
+                                case"Female_Mage":skill=Array("Ice","Evil","Flash","Death");break;
+                                case"Female_Borg":skill=Array("Protect","Drain","Reflect","Repel");break;
+                                default:skill=Array("Error","Please","Mail","Wander@thunderized.org");break;
+                        }
+                        a=new Array();
+                        a=Array("A","B","C","D");
+                        for(var i=0;i<=4;i++){
+                                document.getElementById(a[i]+"I").innerHTML = skill[i]+" I";
+                                document.getElementById(a[i]+"II").innerHTML = skill[i]+" II";
+                                document.getElementById(a[i]+"III").innerHTML = skill[i]+" III";
+                                document.getElementById(a[i]+"IV").innerHTML = skill[i]+" IV";
+                        }
+                }
+                function change_total(){
+                        var total_exp = parseInt(document.getElementById("AI_Input").value+0)+
+                                                        parseInt(document.getElementById("AII_Input").value+0)+
+                                                        parseInt(document.getElementById("AIII_Input").value+0)+
+                                                        parseInt(document.getElementById("AIV_Input").value+0)+
+                                                        parseInt(document.getElementById("BI_Input").value+0)+
+                                                        parseInt(document.getElementById("BII_Input").value+0)+
+                                                        parseInt(document.getElementById("BIII_Input").value+0)+
+                                                        parseInt(document.getElementById("BIV_Input").value+0)+
+                                                        parseInt(document.getElementById("CI_Input").value+0)+
+                                                        parseInt(document.getElementById("CII_Input").value+0)+
+                                                        parseInt(document.getElementById("CIII_Input").value+0)+
+                                                        parseInt(document.getElementById("CIV_Input").value+0)+
+                                                        parseInt(document.getElementById("DI_Input").value+0)+
+                                                        parseInt(document.getElementById("DII_Input").value+0)+
+                                                        parseInt(document.getElementById("DIII_Input").value+0)+
+                                                        parseInt(document.getElementById("DIV_Input").value+0);
+                        total_exp = total_exp/10;
+                        document.getElementById("Total_Exp").innerHTML = "Total Exp: "+total_exp;
+                        exp_for = new Array();
+                        exp_for['white']        = (0-total_exp);
+                        exp_for['red']  = (20000-total_exp);
+                        exp_for['orange']       = (40000-total_exp);
+                        exp_for['yellow']       = (67200-total_exp);
+                        exp_for['green']        = (107200-total_exp);
+                        exp_for['lightblue']    = (161600-total_exp);
+                        exp_for['darkblue']     = (236832-total_exp);
+                        var col = document.getElementById("for_color").value;
+                        col     = col.toLowerCase();
+                        col     = col.replace(' ','');
+                        document.getElementById("till_white").innerHTML         = "Till white: "+exp_for['white'];
+                        document.getElementById("till_red").innerHTML           = "Till red: "+exp_for['red'];
+                        document.getElementById("till_orange").innerHTML        = "Till orange: "+exp_for['orange'];
+                        document.getElementById("till_yellow").innerHTML        = "Till yellow: "+exp_for['yellow'];
+                        document.getElementById("till_green").innerHTML         = "Till green: "+exp_for['green'];
+                        document.getElementById("till_lightblue").innerHTML     = "Till light blue: "+exp_for['lightblue'];
+                        document.getElementById("till_darkblue").innerHTML      = "Till dark blue: "+exp_for['darkblue'];
+                        var dr  = exp_for[col]/60;
+                        var dd  = dr/5;
+                        var sr  = exp_for[col]/25;
+                        var fsr = exp_for[col]/150;                     
+                        document.getElementById("drow_rounds").innerHTML        = Math.ceil(dr);
+                        document.getElementById("drow_days").innerHTML  = Math.ceil(dd);
+                        document.getElementById("seal_rounds").innerHTML        = Math.ceil(sr);
+                        document.getElementById("full_spam_rounds").innerHTML   =  Math.ceil(fsr);
+                }
+                //]]>-->
+              </script>
+              <h2>Skill Exp Calculator</h2>
+              <h5>~ Thanks to KageBunShin for the idea by making <a href="http://files.thunderized.org/Skill%20Exp%20Calc.%20V1.1.xls">this excel file</a></h5>
+              <div id="select_div">
+                Race: <select id="choose_race" onchange="choose_race('IE')">
+                  <option onclick="hide_tables()">
+                    &nbsp;
+                  </option>
+                  <option value="Male_Human" onclick="choose_race('Male_Human')">
+                    Male Human
+                  </option>
+                  <option value="Male_Centaur" onclick="choose_race('Male_Centaur')">
+                    Male Centaur
+                  </option>
+                  <option value="Male_Mage" onclick="choose_race('Male_Mage')">
+                    Male Mage
+                  </option>
+                  <option value="Male_Borg" onclick="choose_race('Male_Borg')">
+                    Male Borg
+                  </option>
+                  <option value="Female_Human" onclick="choose_race('Female_Human')">
+                    Female Human
+                  </option>
+                  <option value="Female_Centaur" onclick="choose_race('Female_Centaur')">
+                    Female Centaur
+                  </option>
+                  <option value="Female_Mage" onclick="choose_race('Female_Mage')">
+                    Female Mage
+                  </option>
+                  <option value="Female_Borg" onclick="choose_race('Female_Borg')">
+                    Female Borg
+                  </option>
+                </select>
+              </div>
+              <form>
+                <table id="Data_Table" cellpadding="5">
+                  <tr>
+                    <td>
+                      <div id="AI"></div>
+                    </td>
+                    <td><input id="AI_Input" onkeyup="change_total()"></td>
+                    <td rowspan="16" style="padding-left:8px;">
+                      <div id="Total_Exp">
+                        Total Exp: 0
+                      </div>
+                      <div id="till_white" style="color:#FFFFFF;">
+                        Till white: 0
+                      </div>
+                      <div id="till_red" style="color:#FF0000;">
+                        Till red: 20000
+                      </div>
+                      <div id="till_orange" style="color:#FF9900;">
+                        Till orange: 40000
+                      </div>
+                      <div id="till_yellow" style="color:#FFFF00;">
+                        Till yellow: 67200
+                      </div>
+                      <div id="till_green" style="color:#00FF00;">
+                        Till green: 107200
+                      </div>
+                      <div id="till_lightblue" style="color:#00FFFF;">
+                        Till light blue: 161600
+                      </div>
+                      <div id="till_darkblue" style="color:#000088;">
+                        Till dark blue: 236832
+                      </div>
+                    </td>
+                    <td rowspan="16" style="padding-left:8px;">
+                      For color: <select id="for_color" onchange="change_total();">
+                        <option value="White" onclick="change_total();">
+                          White
+                        </option>
+                        <option value="Red" onclick="change_total();">
+                          Red
+                        </option>
+                        <option value="Orange" onclick="change_total();">
+                          Orange
+                        </option>
+                        <option value="Yellow" onclick="change_total();">
+                          Yellow
+                        </option>
+                        <option value="Green" onclick="change_total();">
+                          Green
+                        </option>
+                        <option value="Light Blue" onclick="change_total();">
+                          Light Blue
+                        </option>
+                        <option value="Dark Blue" onclick="change_total();">
+                          Dark Blue
+                        </option>
+                      </select>
+                      <div>
+                        Drow rounds: <span id="drow_rounds">0</span>
+                      </div>
+                      <div>
+                        Drow days: <span id="drow_days">0</span>
+                      </div>
+                      <div>
+                        Seal rounds: <span id="seal_rounds">0</span>
+                      </div>
+                      <div>
+                        Full spam rounds: <span id="full_spam_rounds">0</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="AII"></div>
+                    </td>
+                    <td><input id="AII_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="AIII"></div>
+                    </td>
+                    <td><input id="AIII_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="AIV"></div>
+                    </td>
+                    <td><input id="AIV_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="BI"></div>
+                    </td>
+                    <td><input id="BI_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="BII"></div>
+                    </td>
+                    <td><input id="BII_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="BIII"></div>
+                    </td>
+                    <td><input id="BIII_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="BIV"></div>
+                    </td>
+                    <td><input id="BIV_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="CI"></div>
+                    </td>
+                    <td><input id="CI_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="CII"></div>
+                    </td>
+                    <td><input id="CII_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="CIII"></div>
+                    </td>
+                    <td><input id="CIII_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="CIV"></div>
+                    </td>
+                    <td><input id="CIV_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="DI"></div>
+                    </td>
+                    <td><input id="DI_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="DII"></div>
+                    </td>
+                    <td><input id="DII_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="DIII"></div>
+                    </td>
+                    <td><input id="DIII_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="DIV"></div>
+                    </td>
+                    <td><input id="DIV_Input" onkeyup="change_total()"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><input type="reset" value="Clear fields" onmousemove="change_total()"></td>
+                  </tr>
+                </table>
+              </form><br>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td width="35px" background="http://mythwar.thunderized.org/images/leftside.gif"></td>
+      <td height="30px" background="http://mythwar.thunderized.org/images/copyrightbg.gif" class="copyright">
+        &copy; Copyright Thunderized.org. Found any mistakes? Is something missing, want your guide or a translation to be posted? <a href="/index.php?act=contact">Click Here!</a>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
